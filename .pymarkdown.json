@@ -1,0 +1,35 @@
+{
+    "plugins" : {
+        "no-hard-tabs": {
+            "enabled": true,
+            "code_blocks": false
+        },
+        "no-multiple-blanks": {
+            "maximum": 2
+        },
+        "blanks-around-headers": {
+            "lines_above": 1,
+            "lines_below": 1
+        },
+        "line-length": {
+            "enabled": true,
+            "line_length": 160,
+            "heading_line_length": 160,
+            "code_blocks": false
+        },
+        "no-inline-html": {
+            "enabled": false
+        },
+        "single-title": {
+            "enabled": false
+        },
+        "ul-style": {
+            "enabled": false
+        }
+    },
+    "extensions" : {
+        "front-matter": {
+            "enabled": true
+        }
+    }
+}
