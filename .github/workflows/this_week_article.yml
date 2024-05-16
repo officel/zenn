@@ -1,0 +1,60 @@
+name: 今週も記事を書こう！
+
+on:
+  schedule:
+    - cron: "0 15 * * SUN"
+  workflow_dispatch:
+
+jobs:
+  twa:
+    permissions:
+      issues: write
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Date
+        id: current
+        env:
+          TZ: 'Asia/Tokyo'
+        shell: bash
+        run: |
+          echo "date=$(date +%m/%d)" >> "$GITHUB_OUTPUT"
+      - name: Blog
+        run: |
+          new_issue_url=$(gh issue create \
+            --title "$TITLE" \
+            --assignee "$ASSIGNEES" \
+            --label "$LABELS" \
+            --body "$BODY")
+          echo "${new_issue_url}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TITLE: "${{ steps.current.outputs.date }} blog"
+          ASSIGNEES: "officel"
+          LABELS: "zenn.blog"
+          BODY: |
+            - 個人としての記事を書く
+            - この issue はネタのメモに使ってよい
+            - 記事を書いたら issue number を入れて PR を出す
+            - 自動で閉じても閉じなくてもよい、ことにする
+      - name: Terraform-jp
+        run: |
+          new_issue_url=$(gh issue create \
+            --title "$TITLE" \
+            --assignee "$ASSIGNEES" \
+            --label "$LABELS" \
+            --body "$BODY")
+            echo "${new_issue_url}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TITLE: "${{ steps.current.outputs.date }} terraform-jp"
+          ASSIGNEES: "officel"
+          LABELS: "zenn.terraform-jp"
+          BODY: |
+            - terraform-jp のパブリケーションとして記事を書く
+            - この issue はネタのメモに使ってよい
+            - 記事を書いたら issue number を入れて PR を出す
+            - 自動で閉じても閉じなくてもよい、ことにする
