@@ -1,0 +1,3 @@
+locals {
+  name = "my-kind"
+}
