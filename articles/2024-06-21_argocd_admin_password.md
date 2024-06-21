@@ -11,7 +11,7 @@ published: true
 - Argo CD を運用するにあたって、パスワード変更について見ていた
 - [公式で最初に出会う](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
 - [FAQ のパスワードを忘れた時](https://argo-cd.readthedocs.io/en/stable/faq/#i-forgot-the-admin-password-how-do-i-reset-it)
-- zenn のスクラップを使って整理したので記事にした
+- zenn の[スクラップ](https://zenn.dev/raki/scraps/2dd81eef60f445)を使って整理したので記事にした
 
 # Argo CD の admin パスワード
 
