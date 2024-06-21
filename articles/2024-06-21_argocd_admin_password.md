@@ -13,23 +13,27 @@ published: true
 - [FAQ のパスワードを忘れた時](https://argo-cd.readthedocs.io/en/stable/faq/#i-forgot-the-admin-password-how-do-i-reset-it)
 - zenn の[スクラップ](https://zenn.dev/raki/scraps/2dd81eef60f445)を使って整理したので記事にした
 
-# Argo CD の admin パスワード
+# 初期パスワード
 
-## 初期パスワード
+## プラグイン類を使わない
 
-### プラグイン類を使わない（kubectlだけあればおｋ）
+kubectlだけあれば大丈夫
 
 ```bash
 kubectl get secret/argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d; echo
 ```
 
-### view-secret プラグインを使う（krew等で view-secret plugin を入れてあれば）
+## view-secret プラグインを使う
+
+krew 等で view-secret plugin を入れてあれば使える（やってることは上と同じ）
 
 ```bash
 kubectl view-secret argocd-initial-admin-secret -n argocd ; echo
 ```
 
-### argocd cli を使う（公式の初期パスワード取得方法。argocd cli を入れる必要がある）
+## argocd cli を使う
+
+公式の初期パスワード取得方法。argocd cli を入れる必要がある
 
 ```bash
 argocd admin initial-password -n argocd
@@ -39,24 +43,24 @@ argocd admin initial-password -n argocd
 初期パスワードを変更して、secret を削除して、これらは使わないようにする必要がある。
 :::
 
-## パスワード変更
+# パスワード変更
 
 パスワードはログイン後に User Info の UPDATE PASSWORD で変更できる。
 （画面から変更するとログアウトさせられて再ログインが必要になる）
 
-### パスワードを変更する
+## パスワードを変更する
 
 ```bash
 argocd account update-password
 ```
 
-### 初期パスワードの入った secret を削除する
+## 初期パスワードの入った secret を削除する
 
 ```bash
 kubectl --namespace argocd delete secret/argocd-initial-admin-secret
 ```
 
-## パスワードを忘れてしまったら
+# パスワードを忘れてしまったら
 
 変更したパスワードを忘れるとか言語道断なので深く反省すること。
 
@@ -64,7 +68,7 @@ kubectl --namespace argocd delete secret/argocd-initial-admin-secret
 
 @[card](https://argo-cd.readthedocs.io/en/stable/faq/#i-forgot-the-admin-password-how-do-i-reset-it)
 
-### 方法１
+## 方法１：直接書き換え
 
 - bcrypt でハッシュ化されたパスワードを生成する
 
@@ -85,7 +89,7 @@ $2a$10$/sxME6TKhWMzTbMo5wxh/OJmF2iQZumrB7I9Y5C47lGp1R22xQdXm
 kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password": "'$(echo $NEW_PASS)'", "admin.passwordMtime": "'$(date +%FT%T%Z)'" }}'
 ```
 
-### 方法２
+## 方法２：初期化しなおし
 
 もう一つの、ドキュメントには手順（コード）が書かれていない方の手順
 
