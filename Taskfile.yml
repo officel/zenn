@@ -1,0 +1,175 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# https://taskfile.dev/
+
+version: '3'
+
+tasks:
+  default:
+    cmd: task --list --sort alphanumeric
+    silent: true
+
+  util:list:
+    # desc: view all tasks
+    summary: |
+      全タスクの出力
+    aliases:
+      - ul
+    cmd: task --list-all --sort alphanumeric
+    silent: true
+
+  util:summary:
+    # desc: view summary of all tasks
+    summary: |
+      全タスクのサマリー出力
+    aliases:
+      - us
+    cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
+    silent: true
+
+  raki:
+    desc: generate articles
+    summary: |
+      __raki_template__.md から記事ファイルを用意する
+    aliases:
+      - r
+    vars:
+      _A: "__attention__.md"
+      _T: "articles/__raki_template__.md"
+      _F:
+        sh: echo "articles/$(date -I)_raki.md"
+    preconditions:
+      - test -f {{._T}}
+    status:
+      - test -f {{._F}}
+    cmds:
+      - cp {{._T}} {{._F}}
+      - code {{._F}}
+      - cat {{._A}}
+
+  raki:git:
+    desc: auto git, use -- COMMIT TITLE
+    summary: |
+      記事を書いたら自動で登録
+      task rg -- コミットタイトル（の一部）
+    aliases:
+      - rg
+    cmds:
+      - task: _git
+        vars:
+          TITLE:
+            sh: echo "blog(raki):" "$(date -I) {{.CLI_ARGS}}"
+          BRANCH:
+            sh: echo "blog/raki/$(date -I)"
+          TARGET: "articles/"
+          # 一連の処理のエラーを捕捉
+          ON_ERROR: /tmp/on_error_raki
+
+
+  terraform:
+    desc: generate articles
+    summary: |
+      __terraform__.md から記事ファイルを用意する
+    aliases:
+      - t
+    vars:
+      _A: "__attention__.md"
+      _T: "articles/__terraform__.md"
+      _F:
+        sh: echo "articles/$(date -I)_terraform.md"
+    preconditions:
+      - test -f {{._T}}
+    status:
+      - test -f {{._F}}
+    cmds:
+      - cp {{._T}} {{._F}}
+      - code {{._F}}
+      - cat {{._A}}
+
+  terraform:git:
+    desc: auto git, use -- COMMIT TITLE
+    summary: |
+      記事を書いたら自動で登録
+      task tg -- コミットタイトル（の一部）
+    aliases:
+      - tg
+    cmds:
+      - task: _git
+        vars:
+          TITLE:
+            sh: echo "blog(terraform_jp):" "$(date -I) {{.CLI_ARGS}}"
+          BRANCH:
+            sh: echo "blog/terraform_jp/$(date -I)"
+          TARGET: "articles/"
+          # 一連の処理のエラーを捕捉
+          ON_ERROR: /tmp/on_error_terraform_jp
+
+
+  _git:
+    summary: git automation
+    requires:
+      vars:
+        - TITLE
+        - BRANCH
+        - TARGET
+        - ON_ERROR
+    cmds:
+      - defer: {task: _git:on_error, vars: {ON_ERROR: "{{.ON_ERROR}}"}}
+      - touch {{.ON_ERROR}}
+      - task: _git:auto
+        vars:
+          TITLE: "{{.TITLE}}"
+          BRANCH: "{{.BRANCH}}"
+          TARGET: "{{.TARGET}}"
+          ON_ERROR: "{{.ON_ERROR}}"
+      - task: _git:gh
+        vars:
+          TITLE: "{{.TITLE}}"
+          BRANCH: "{{.BRANCH}}"
+          ON_ERROR: "{{.ON_ERROR}}"
+      - task: _git:status
+      - rm {{.ON_ERROR}}
+
+  _git:auto:
+    summary: |
+      git add, commit, push までを自動化
+    cmds:
+      - git fetch --prune --all
+      - git checkout origin/HEAD
+      - git add {{.TARGET}}
+      - git commit -m"{{.TITLE}}"
+      - git push origin HEAD:refs/heads/{{.BRANCH}} -f
+
+  _git:gh:
+    summary: |
+      - GitHub CLI を使用して PR を作成し、オートマージを設定する
+      - push 前までと分離しているのは、エラー時の処理が異なるため
+        - push 前までのエラーは reset して処理前に戻す
+        - push 後のエラーは push を再処理する（ON_ERROR のファイルに保存）
+      - PAT の権限がちゃんとしてないとエラーになることに注意
+      - オートマージの設定もリポジトリ側に必要
+    cmds:
+      - gh pr create -t "{{.TITLE}}" -b "" -l "" -H "{{.BRANCH}}" -B "main"
+      - gh pr merge "{{.BRANCH}}" --auto -s
+
+  _git:status:
+    internal: true
+    silent: true
+    cmds:
+      - git plog -5
+        # see https://github.com/officel/config_git/blob/main/config#L21
+      - git status --short --branch
+
+  _git:on_error:
+    internal: true
+    silent: true
+    status:
+      - test ! -e {{.ON_ERROR}}
+        # エラーファイルが存在したら処理する
+    requires:
+      vars:
+        - ON_ERROR
+    cmds:
+      - defer: rm {{.ON_ERROR}}
+      - cmd: git reset --mixed origin/HEAD
+        ignore_error: true
+      - task: _git:status
