@@ -3,7 +3,7 @@ title: "Task(taskfile.dev) で zenn の記事執筆の前後を楽にする"
 emoji: "✍"
 type: "tech"
 topics: ["task", "taskfile", "taskfiledev", "git","github"]
-published: false
+published: true
 ---
 
 # tl;dr
@@ -81,6 +81,27 @@ task: Available tasks for this project:
 - タスクのグルーピングに名前空間を使って同じようなタスクは同じように見える（ようにしている）
 - `_git` は自分の他のリポジトリでも再利用できそうなので別ファイル化を検討中
 - 前述のとおり、エラー処理には自分でも不満があって（シェルで分岐はもってのほか）改善の余地があると思っている
+- util:summary で登録されているタスクを全部抽出してそれぞれ --summary を出力できるようにした
+
+```bash
+tasks:
+  util:summary:
+    # desc: view summary of all tasks
+    summary: |
+      全タスクのサマリー出力
+    aliases:
+      - us
+    cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
+    silent: true
+```
+
+## 気づき
+
+- 表示するタスクと非表示にするタスクの区別をつける
+- 名前空間を利用してタスクをグルーピングする
+- エラー処理まわりが書きにくいので更新をチェック
+- -n（--dry）でテスト大事
+- -v（--verbose）でタスクの流れを確認すると理解が深まる
 
 # おわりに
 
