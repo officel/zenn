@@ -1,4 +1,4 @@
-# see https://zenn.dev/raki/articles/2024-06-24_terraform_v1.9.0_input_validation
+# see https://zenn.dev/terraform_jp/articles/2024-06-27_terraform_v1_9_0_input
 
 locals {
   # ami の image_id に次のいずれかの番号を使用することにしたい
