@@ -16,11 +16,11 @@ published: true
 
 日本語ではこれが有名？
 
-@[code](https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdatestring)
+@[card](https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdatestring)
 
 date で検索しても大差ないか
 
-@[code](https://marketplace.visualstudio.com/search?term=date&target=VSCode&category=Snippets&sortBy=Relevance)
+@[card](https://marketplace.visualstudio.com/search?term=date&target=VSCode&category=Snippets&sortBy=Relevance)
 
 ぶっちゃけ自分でコードスニペットを管理すれば済むのを機能拡張に委ねるのはちょっと。。。
 
@@ -59,8 +59,8 @@ date で検索しても大差ないか
         "prefix": ["die", "dice", "random", "サイコロ"],
         "body": ["${RANDOM/.*([1-6]{1}).*/${1:-🎲}/} "],
         "description": "roll a die."
-		// ランダム数字列から1-6があれば1つだけ抽出。なければサイコロの絵文字を表示する
-		// $RANDOMは6桁のランダムな数字なので、000000や777777以上の数の場合は（サイコロとして）不適切なのでエラー代わりの絵文字ということ
+        // ランダム数字列から1-6があれば1つだけ抽出。なければサイコロの絵文字を表示する
+        // $RANDOMは6桁のランダムな数字なので、000000や777777以上の数の場合は（サイコロとして）不適切なのでエラー代わりの絵文字ということ
         // 英語だと単一のサイコロは die（名詞）で2つ以上は dice らしいんだけど、日本人的には dice って書きたいよね。die（死）って縁起悪いし
     }
 }
