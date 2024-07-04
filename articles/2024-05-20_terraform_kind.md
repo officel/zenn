@@ -11,7 +11,7 @@ publication_name: "terraform_jp"
 
 - kind(Kubernetes IN Docker) を使う
 - コマンドを叩くのが面倒なので terraform で管理したい
-- Provider に迷ったけど特に問題なかった
+- Provider に迷ったけどとくに問題なかった
 - 実行可能な[コードはこちら](https://github.com/officel/zenn/tree/main/terraform/2024-05_kind)
 
 # 経緯
@@ -31,7 +31,7 @@ qiita にも zenn にも kind に関する多数の記事があって、検索�
 
 [Terraform Registry](https://registry.terraform.io/search/providers?q=kind) で `kind` を検索してみると、検索結果の精度が酷い。
 ハズレをぶん投げて見つけたのが [tehcyx/kind](https://registry.terraform.io/providers/tehcyx/kind/latest/docs) です。
-github を見に行くと fork なのがわかるけど、fork 元はすでにアーカイブなので、今後はこれで問題ないのかなと。
+GitHub を見に行くと fork なのがわかるけど、fork 元はすでにアーカイブなので、今後はこれで問題ないのかなと。
 野良 provider しかないのは仕方ないというか、provider を自作するほどの時間もスキルもないのでよしとします。
 
 # terraform で動かしてみる
@@ -52,7 +52,7 @@ terraform {
 provider "kind" {}
 ```
 
-クラスタの設定を hcl でリソースとして表現します。
+クラスターの設定を hcl でリソースとして表現します。
 
 ```hcl
 # kind_cluster.tf
@@ -102,7 +102,7 @@ locals {
 }
 ```
 
-あとは普段どおりで完成
+あとは普段どうりで完成
 
 ```bash
 terraform init
@@ -118,7 +118,7 @@ backend を定義していないので、ローカルに state ができます�
 
 - ローカルで一人実行なら十分
 - kind を kind としてではなく、terraform resource として扱うのは terraform ユーザとしては楽
-- 今のところ cluster の設定変更の差分更新はできず、どこを変更してもクラスタごと作り直しになるみたい（providerの仕様）
-- 乗せる k8s リソースも helm や terraform でインストールしたり更新したりするテストをするので特に困らない
-- 普段から terraform 運用をしていると、通常使わない provider はいじらないことが多いと思うので、たまには違うことをしてみるのも面白い
+- 今のところ cluster の設定変更の差分更新はできず、どこを変更してもクラスターごと作り直しになるみたい（providerの仕様）
+- 乗せる k8s リソースも helm や terraform でインストールしたり更新したりするテストをするのでとくに困らない
+- 普段から terraform 運用をしていると、通常使わない provider はいじらないことが多いと思うので、たまには違うことをしてみるのもおもしろい
 - （余談）markdown lint で no-bare-urls に引っ掛けるので、zenn のマークダウンで裸の URL 処理やめて欲しいなって思った

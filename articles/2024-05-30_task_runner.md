@@ -40,11 +40,11 @@ published: true
 
 - Grunt 等の JS を必要とするビルダーは全部落選（JSのビルドは要件外なのと、それらをラップするランナーが欲しいので）
 - Apache 系ビルドツールは落選（モダンじゃないってゆうか Maven とか使うなら GNU Make でいいでしょって）
-- [Waypoint by HashiCorp](https://www.waypointproject.io/) （リリース当時は良さげに見えたけどね。ローカルサーバは今回必要としてない）
-- [babashka](https://github.com/babashka/babashka) （bb ってコマンド名はタイプしやすくて良さげだけど）
-- [Hardhat](https://hardhat.org/) （JS系だし Ethereum に寄りたいわけでもないので）
-- [Buffalo](https://gobuffalo.io/) （開発停止したっぽい？あと日本ではググラビリティが悪そうｗ）
-- [realize](https://github.com/oxequa/realize) （Go 用だし？）
+- [Waypoint by HashiCorp](https://www.waypointproject.io/)（リリース当時は良さげに見えたけどね。ローカルサーバは今回必要としてない）
+- [babashka](https://github.com/babashka/babashka)（bb ってコマンド名はタイプしやすくて良さげだけど）
+- [Hardhat](https://hardhat.org/)（JS系だし Ethereum に寄りたいわけでもないので）
+- [Buffalo](https://gobuffalo.io/)（開発停止したっぽい？あと日本ではググラビリティが悪そうｗ）
+- [realize](https://github.com/oxequa/realize)（Go 用だし？）
 
 ## こうであって欲しいもの
 
@@ -65,7 +65,7 @@ published: true
 
 # 候補
 
-- github は [こんな感じ](https://github.com/search?q=task+runner&type=repositories&s=updated&o=desc&p=1) で検索した
+- GitHub は [こんな感じ](https://github.com/search?q=task+runner&type=repositories&s=updated&o=desc&p=1) で検索した
 - 国外の OSS 比較サイトやツールの紹介ブログ等を使って探した
 - 正直腐るほどあるので、全部は見ていない
 

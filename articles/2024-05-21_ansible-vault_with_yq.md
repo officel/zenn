@@ -39,11 +39,11 @@ the_secret: !vault |
 で、yq を使うことにした。
 ちなみに、yq って無茶苦茶ググラビリティが悪いってゆうか、
 
-pip で入る [kislyuk/yq: Command-line YAML, XML, TOML processor - jq wrapper for YAML/XML/TOML documents](https://github.com/kislyuk/yq) （brew では python-yq）
+pip で入る [kislyuk/yq: Command-line YAML, XML, TOML processor - jq wrapper for YAML/XML/TOML documents](https://github.com/kislyuk/yq)（brew では python-yq）
 
-brew や aqua で入る [mikefarah/yq: yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor](https://github.com/mikefarah/yq) （こっちが yq）
+brew や aqua で入る [mikefarah/yq: yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor](https://github.com/mikefarah/yq)（こっちが yq）
 
-があって、どっちを使ってるかわからないと時々はまるので注意する。今回の使い方だとどっちを使ってても同じだけど。
+があって、どっちを使ってるかわからないと、ときどきはまるので注意する。今回の使い方だとどっちを使ってても同じだけど。
 
 というわけで、secret.yml に入っている password という名前の暗号化された文字列をしゅっと復号。
 
@@ -53,12 +53,12 @@ yq '.password' secret.yml | ansible-vault decrypt
 
 - `ANSIBLE_VAULT_PASSWORD_FILE` 環境変数でパスワードが登録してある（なければ対話形式で聞いてくるから問題ない）
 - 他にもたくさん暗号化された文字列があって、同じファイルに入っている
-- ひとつずつ復号するの面倒くさい（今回は１つしか対象にしてないので問題なかった）
+- ひとつずつ復号するの面倒くさい（今回は1つしか対象にしてないので問題なかった）
 - パスワード漏えいした時にローテさせるの本当に面倒くさいなって
 
 # 雑記
 
 - ansible-vault は口伝のパスワードで暗号化しておけて git 管理化におけるので便利
 - ファイルごと暗号化したいお気持ち vs 個別暗号化の（俺の知らない）他のメリット？
-- 他のシークレットマネージャとの使い分けを考えたい
+- 他のシークレットマネージャーとの使い分けを考えたい
 - みたいなことを考えてたんだけど、コメントで意見ください

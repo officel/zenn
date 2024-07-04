@@ -83,7 +83,7 @@ echo $NEW_PASS
 $2a$10$/sxME6TKhWMzTbMo5wxh/OJmF2iQZumrB7I9Y5C47lGp1R22xQdXm
 ```
 
-- 更新する（公式のやつ長いから１行に収めたかった。というかコピペしやすくしたかった）
+- 更新する（公式のやつ長いから1行に収めたかった。というかコピペしやすくしたかった）
 
 ```bash
 kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password": "'$(echo $NEW_PASS)'", "admin.passwordMtime": "'$(date +%FT%T%Z)'" }}'
@@ -91,7 +91,7 @@ kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password
 
 ## 方法２：初期化しなおし
 
-もう一つの、ドキュメントには手順（コード）が書かれていない方の手順
+もう1つの、ドキュメントには手順（コード）が書かれていない方の手順
 
 - secret の値を消す
 
@@ -110,5 +110,5 @@ kubectl delete pods -n argocd -l app.kubernetes.io/name=argocd-server
 # まとめ
 
 - 管理者パスワードの CRUD は運用する上で避けては通れない（なのでこういうページは公式ドキュメントで整理して欲しいな）
-- 再設定しても特に問題は起きない（安心して更新していい）
-- 逆に運用を任されたら即パスワード変更を行って、影響範囲の確認を実施することをおすすめする（怒られても責任は取れないけど）
+- 再設定してもとくに問題は起きない（安心して更新していい）
+- 逆に運用を任されたら即パスワード変更を行って、影響範囲の確認を実施することをオススメする（怒られても責任は取れないけど）
