@@ -23,7 +23,7 @@ publication_name: "terraform_jp"
 
 # 改善、その他
 
-- terraform なので使い終わったら destroy （前回分も捨てる）
+- terraform なので使い終わったら destroy（前回分も捨てる）
 - direnv で対象ディレクトリにいる時だけ kubeconfig を設定する（~/.kube/config を汚さない）
 - コードを少し読みやすく
 - helm 管理

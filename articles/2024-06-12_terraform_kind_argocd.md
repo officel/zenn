@@ -17,9 +17,9 @@ publication_name: "terraform_jp"
 
 # 経緯
 
-- 業務で Argo CD を使うことになった（github actions や他のCI/CDツールとの比較？）
-- 業務用のクラスタであれこれすると周りにも迷惑をかけるかもしれないのでローカルで十分に遊ぶつもり
-- port-forward を毎回手打ちするの面倒なので、フルオートで ingress 経由（業務用クラスタではLB、ローカル kind では NodePort）でアクセスさせたい
+- 業務で Argo CD を使うことになった（GitHub actions や他のCI/CDツールとの比較？）
+- 業務用のクラスターであれこれすると周りにも迷惑をかけるかもしれないのでローカルで十分に遊ぶつもり
+- port-forward を毎回手打ちするの面倒なので、フルオートで ingress 経由（業務用クラスターではLB、ローカル kind では NodePort）でアクセスさせたい
 
 # 改善、その他
 
@@ -37,6 +37,6 @@ publication_name: "terraform_jp"
 # このあとは
 
 - Argo CD を使いこなす練習をする。要は運用演習
-- Istio を使う別のクラスタもあるので、Istio の使い方を学ぶ
+- Istio を使う別のクラスターもあるので、Istio の使い方を学ぶ
 - Istio の後ろに Argo CD をおける（ingress-nginxを代替する）のでそれも試したい
 - 当然のように Kiali も付いてくるのでその辺も

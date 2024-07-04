@@ -11,14 +11,14 @@ publication_name: "terraform_jp"
 
 - 細かすぎて伝わらない小ネタシリーズ
 - [aws_route53_record.allow_overwrite](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record#allow_overwrite)
-- 付けないと既にレコードがある場合にエラーになってしまう
+- 付けないとすでにレコードがある場合にエラーになってしまう
 - IaC としてコードが常に正でいいなら付けておくとよい
 
 # aws_route53_record resource
 
 - Amazon Route 53 のレコードを管理するリソース
-- 普通に使っている分には特に問題ないはず
-- 既に存在しているレコードを上書きしようとするとエラーになる
+- 普通に使っている分にはとくに問題ないはず
+- すでに存在しているレコードを上書きしようとするとエラーになる
 
 ```bash
 Error: creating Route53 Record: operation error Route 53: ChangeResourceRecordSets, https response error StatusCode: 400, RequestID: XXXXXX, InvalidChangeBatch: [Tried to create resource record set [name='XXXXXXX.', type='CNAME'] but it already exists]

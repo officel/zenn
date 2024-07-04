@@ -8,7 +8,7 @@ published: true
 
 # tl;dr
 
-- github actions に毎週 issue を立ててもらう
+- GitHub actions に毎週 issue を立ててもらう
 - 記事を書いたら issue を閉じる
 - Happy!! 🎉
 
@@ -17,9 +17,9 @@ published: true
 - [自己紹介](https://zenn.dev/raki/articles/2024-05-11_raki_self) で継続を目標においた
 - 面倒くさくなったり忘れたりサボったりして継続できないのはよくない
 - issue ドリブンで強制すればできる（元々issueを処理するのは習慣付いている）
-- 面倒なことは github にやってもらう
+- 面倒なことは GitHub にやってもらう
 
-# github actions と issue
+# GitHub actions と issue
 
 - [officel/zenn: zenn.dev repo](https://github.com/officel/zenn) この記事の公開リポジトリ
 - [fix: #6 scheduled workflow for writing by officel · Pull Request #16 · officel/zenn](https://github.com/officel/zenn/pull/16)
@@ -91,9 +91,9 @@ jobs:
 
 ![image](https://github.com/officel/zenn/assets/110354/273aaabe-14b8-4a59-8ec0-99cfe4ab5a85)
 
-- 自分用の記事と terraform-jp のパブリケーション用と２つ issue を作る
+- 自分用の記事と terraform-jp のパブリケーション用と2つ issue を作る
 - どちらも自分にアサイン
-- github project へはプロジェクトのワークフローで自動追加
+- GitHub project へはプロジェクトのワークフローで自動追加
 
 # 懸念とか悩みとか
 
@@ -105,4 +105,4 @@ jobs:
 # とりあえず
 
 継続して記事を書く準備自体はできたので、当面はこれでやってみる予定。
-来週からは週イチ（✕２）更新を目標に地道にがんばります。
+来週からは週イチ（✕2）更新を目標に地道にがんばります。
