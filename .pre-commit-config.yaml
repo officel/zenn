@@ -19,12 +19,13 @@ repos:
             path/to/test.md
           )$
         args:
-          - --config=.pymarkdown.json
+          - --config=.config/.pymarkdown.json
           - scan
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.35.1
     hooks:
       - id: yamllint
+        args: [-c=.config/.yamllint]
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v3.4.0
     hooks:
