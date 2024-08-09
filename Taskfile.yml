@@ -14,6 +14,7 @@ tasks:
       全タスクの出力
     aliases:
       - ul
+      - ls
     cmd: task --list-all --sort alphanumeric
     silent: true
 
@@ -23,6 +24,7 @@ tasks:
       全タスクのサマリー出力
     aliases:
       - us
+      - la
     cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
     silent: true
 
