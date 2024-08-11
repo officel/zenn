@@ -21,7 +21,7 @@ published: true
 
 - `.config` は隠しディレクトリ扱いになるので、ソースコード側で使用するべきではない
 
-  - [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/
+  - [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/)
   - 隠しディレクトリはIDEの設定等で表示させないことで存在しないもの扱いしやすい（必要な時だけあればいい）
 
 # command
