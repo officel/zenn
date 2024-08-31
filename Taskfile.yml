@@ -62,7 +62,7 @@ tasks:
             sh: echo "blog(raki):" "$(date -I) {{.CLI_ARGS}}"
           BRANCH:
             sh: echo "blog/raki/$(date -I)"
-          TARGET: "articles/"
+          TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_raki
 
@@ -101,7 +101,7 @@ tasks:
             sh: echo "blog(terraform_jp):" "$(date -I) {{.CLI_ARGS}}"
           BRANCH:
             sh: echo "blog/terraform_jp/$(date -I)"
-          TARGET: "articles/"
+          TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_terraform_jp
 
