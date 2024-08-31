@@ -18,4 +18,5 @@ rules:
     check-keys: false
 
 ignore: |
+  backup/
   node_modules/
