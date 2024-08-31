@@ -14,22 +14,23 @@ repos:
     rev: v0.9.22
     hooks:
       - id: pymarkdown
+        args:
+          - --config=.config/.pymarkdown.yaml
+          - scan
         exclude: |
           (?x)^(
-            path/to/test.md
+            backup/[\d|\w|_]+\/(.*?)|
+            path/to/file3.py
           )$
-        args:
-          - --config=.config/.pymarkdown.json
-          - scan
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.35.1
     hooks:
       - id: yamllint
-        args: [-c=.config/.yamllint]
+        args:
+          - -c=.config/.yamllint
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v3.4.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
         args: [feat, fix, build, chore, ci, docs, perf, refactor, revert, style, test, blog]
-        # optional: list of Conventional Commits types to allow e.g. [feat, fix, ci, chore, test]
