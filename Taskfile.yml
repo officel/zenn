@@ -115,8 +115,13 @@ tasks:
         - TARGET
         - ON_ERROR
     cmds:
-      - defer: {task: _git:on_error, vars: {ON_ERROR: "{{.ON_ERROR}}"}}
+      # - defer: {task: _git:on_error, vars: {ON_ERROR: "{{.ON_ERROR}}"}}
+      - defer:
+          task: _git:on_error
+          vars:
+            ON_ERROR: "{{.ON_ERROR}}"
       - touch {{.ON_ERROR}}
+      - ls -l {{.ON_ERROR}}
       - task: _git:auto
         vars:
           TITLE: "{{.TITLE}}"
@@ -128,7 +133,7 @@ tasks:
           TITLE: "{{.TITLE}}"
           BRANCH: "{{.BRANCH}}"
           ON_ERROR: "{{.ON_ERROR}}"
-      - task: _git:status
+      # - task: _git:status
       - rm {{.ON_ERROR}}
 
   _git:auto:
@@ -154,7 +159,7 @@ tasks:
       - gh pr merge "{{.BRANCH}}" --auto -s
 
   _git:status:
-    internal: true
+    # internal: true
     silent: true
     cmds:
       - git plog -5
@@ -162,8 +167,8 @@ tasks:
       - git status --short --branch
 
   _git:on_error:
-    internal: true
-    silent: true
+    # internal: true
+    # silent: true
     status:
       - test ! -e {{.ON_ERROR}}
         # エラーファイルが存在したら処理する
@@ -172,6 +177,6 @@ tasks:
         - ON_ERROR
     cmds:
       - defer: rm {{.ON_ERROR}}
+      - ls -l {{.ON_ERROR}}
       - cmd: git reset --mixed origin/HEAD
-        ignore_error: true
-      - task: _git:status
+      # - task: _git:status
