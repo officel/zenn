@@ -1,5 +1,5 @@
 ---
-title: "terraform の細かすぎて伝わらない小ネタ GitHub Actions Runner Ubuntu 24.04 には Terraform が入ってない"
+title: "terraform の細かすぎて伝わらない小ネタ GHAR Ubuntu 24.04 には Terraform が入ってない"
 emoji: "⁉"
 type: "tech"
 topics: ["terraform","github"]
@@ -46,3 +46,7 @@ publication_name: "terraform_jp"
 - setup-terraform 等のワークフローを使うなどしてインストールして使う必要があります
 - GitHub Actions Runner を使っている諸兄はご注意を。
 - そういえば Act のイメージも更新がいるかな。。。
+
+# おまけ
+
+- ファイル名とタイトルの文字数制限をもうちょい緩和できないんか。。。
