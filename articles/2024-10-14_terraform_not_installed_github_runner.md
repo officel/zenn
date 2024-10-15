@@ -16,6 +16,7 @@ publication_name: "terraform_jp"
 
 # 素晴らしい
 
+@[card](https://github.com/cloudposse/atmos/pull/717)
 @[card](https://github.com/cloudposse/atmos/pull/718)
 
 - 昼過ぎに見かけた
