@@ -9,7 +9,7 @@ publication_name: "terraform_jp"
 
 # tl;dr
 
-- [GitHub のぶログ](https://github.blog/changelog/2024-09-25-actions-new-images-and-ubuntu-latest-changes/) で発表されているように `ubuntu-latest` が 22.04 から 24.04 に入れ替えが始まっている
+- [GitHub のブログ](https://github.blog/changelog/2024-09-25-actions-new-images-and-ubuntu-latest-changes/) で発表されているように `ubuntu-latest` が 22.04 から 24.04 に入れ替えが始まっている
 - [runner-images/images/ubuntu/Ubuntu2204-Readme.md](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md) と
 - [runner-images/images/ubuntu/Ubuntu2404-Readme.md](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md) を比べると Terraform がなくなっている
 - setup-terraform action を使っていれば何も問題ないけどね
