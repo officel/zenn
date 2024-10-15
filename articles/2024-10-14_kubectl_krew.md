@@ -60,12 +60,10 @@ whoami
 - プラグイン毎の使い方とか学びを別途記事にする予定（宣言駆動）
 
 ```bash
-k krew list | xargs -i sh -c 'echo "## {}\n\n\`\`\`bash\n\$ kubectl krew info {}" && kubectl krew info {} && echo "\`\`\`\n"'
+k krew list | xargs -i sh -c 'echo ":::details {}\n\n\`\`\`bash\n\$ kubectl krew info {}" && kubectl krew info {} && echo "\`\`\`\n\n:::\n"'
 ```
 
-:::details 邪魔だからたたむ
-
-## access-matrix
+:::details access-matrix
 
 ```bash
 $ kubectl krew info access-matrix
@@ -96,7 +94,9 @@ CAVEATS:
 /
 ```
 
-## assert
+:::
+
+:::details assert
 
 ```bash
 $ kubectl krew info assert
@@ -113,7 +113,9 @@ your working cluster.
 
 ```
 
-## aws-auth
+:::
+
+:::details aws-auth
 
 ```bash
 $ kubectl krew info aws-auth
@@ -130,7 +132,9 @@ roles or users.
 
 ```
 
-## cond
+:::
+
+:::details cond
 
 ```bash
 $ kubectl krew info cond
@@ -146,7 +150,9 @@ resource conditions for Kubernetes objects.
 
 ```
 
-## config-cleanup
+:::
+
+:::details config-cleanup
 
 ```bash
 $ kubectl krew info config-cleanup
@@ -163,7 +169,9 @@ Otherwise, the entries are removed.
 
 ```
 
-## ctx
+:::
+
+:::details ctx
 
 ```bash
 $ kubectl krew info ctx
@@ -186,7 +194,9 @@ CAVEATS:
 /
 ```
 
-## deprecations
+:::
+
+:::details deprecations
 
 ```bash
 $ kubectl krew info deprecations
@@ -213,7 +223,9 @@ CAVEATS:
 /
 ```
 
-## graph
+:::
+
+:::details graph
 
 ```bash
 $ kubectl krew info graph
@@ -236,7 +248,9 @@ CAVEATS:
 /
 ```
 
-## iexec
+:::
+
+:::details iexec
 
 ```bash
 $ kubectl krew info iexec
@@ -258,7 +272,9 @@ CAVEATS:
 /
 ```
 
-## images
+:::
+
+:::details images
 
 ```bash
 $ kubectl krew info images
@@ -275,7 +291,9 @@ namespace.
 
 ```
 
-## krew
+:::
+
+:::details krew
 
 ```bash
 $ kubectl krew info krew
@@ -307,7 +325,9 @@ CAVEATS:
 /
 ```
 
-## ktop
+:::
+
+:::details ktop
 
 ```bash
 $ kubectl krew info ktop
@@ -327,7 +347,9 @@ CAVEATS:
 /
 ```
 
-## kubescape
+:::
+
+:::details kubescape
 
 ```bash
 $ kubectl krew info kubescape
@@ -343,7 +365,9 @@ with an easy-to-use CLI interface, flexible output formats, and automated scanni
 
 ```
 
-## kuttl
+:::
+
+:::details kuttl
 
 ```bash
 $ kubectl krew info kuttl
@@ -359,7 +383,9 @@ toolkit for testing operators on Kubernetes.
 
 ```
 
-## neat
+:::
+
+:::details neat
 
 ```bash
 $ kubectl krew info neat
@@ -379,7 +405,9 @@ Examples:
 
 ```
 
-## ns
+:::
+
+:::details ns
 
 ```bash
 $ kubectl krew info ns
@@ -401,7 +429,9 @@ CAVEATS:
 /
 ```
 
-## open-svc
+:::
+
+:::details open-svc
 
 ```bash
 $ kubectl krew info open-svc
@@ -418,7 +448,9 @@ accessible via their ClusterIP.
 
 ```
 
-## popeye
+:::
+
+:::details popeye
 
 ```bash
 $ kubectl krew info popeye
@@ -445,7 +477,9 @@ resources in any way!
 
 ```
 
-## resource-capacity
+:::
+
+:::details resource-capacity
 
 ```bash
 $ kubectl krew info resource-capacity
@@ -460,7 +494,9 @@ A simple CLI that provides an overview of the resource requests, limits, and uti
 
 ```
 
-## retina
+:::
+
+:::details retina
 
 ```bash
 $ kubectl krew info retina
@@ -480,7 +516,9 @@ text files, and can then be stored at remote storage destinations.
 
 ```
 
-## score
+:::
+
+:::details score
 
 ```bash
 $ kubectl krew info score
@@ -494,7 +532,9 @@ DESCRIPTION:
 Kubernetes object analysis with recommendations for improved reliability and security.
 ```
 
-## sniff
+:::
+
+:::details sniff
 
 ```bash
 $ kubectl krew info sniff
@@ -518,7 +558,9 @@ CAVEATS:
 /
 ```
 
-## status
+:::
+
+:::details status
 
 ```bash
 $ kubectl krew info status
@@ -542,7 +584,9 @@ CAVEATS:
 /
 ```
 
-## stern
+:::
+
+:::details stern
 
 ```bash
 $ kubectl krew info stern
@@ -567,7 +611,9 @@ limit what containers to show. By default all containers are listened to.
 
 ```
 
-## tree
+:::
+
+:::details tree
 
 ```bash
 $ kubectl krew info tree
@@ -590,7 +636,9 @@ CAVEATS:
 /
 ```
 
-## view-secret
+:::
+
+:::details view-secret
 
 ```bash
 $ kubectl krew info view-secret
@@ -626,7 +674,9 @@ $ kubectl view-secret <secret> -q/--quiet
 
 ```
 
-## view-utilization
+:::
+
+:::details view-utilization
 
 ```bash
 $ kubectl krew info view-utilization
@@ -647,7 +697,9 @@ CAVEATS:
 /
 ```
 
-## who-can
+:::
+
+:::details who-can
 
 ```bash
 $ kubectl krew info who-can
@@ -682,7 +734,9 @@ CAVEATS:
 /
 ```
 
-## whoami
+:::
+
+:::details whoami
 
 ```bash
 $ kubectl krew info whoami
