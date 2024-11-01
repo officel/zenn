@@ -184,7 +184,7 @@ You can apply this plan to save these new output values to the Terraform state, 
 
 テスト用のコードはここに
 
-@[github](https://github.com/officel/zenn/tree/main/terraform/v1.10.0-beta1_element/)
+@[github](https://github.com/officel/zenn/blob/main/terraform/v1.10.0-beta1_element/main.tf)
 
 おまけ。
 
