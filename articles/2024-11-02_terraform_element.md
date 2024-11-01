@@ -15,7 +15,7 @@ publication_name: "terraform_jp"
 
 # terraform v1.10.0-beta1
 
-@[card](https://x.com/raki/status/1852039989389070665)
+@[tweet](https://x.com/raki/status/1852039989389070665)
 
 - [Release v1.10.0-beta1 · hashicorp/terraform](https://github.com/hashicorp/terraform/releases/tag/v1.10.0-beta1)
 
@@ -84,6 +84,8 @@ $
 そう、まずテストはエラーにしてからやらないとね（AA略
 
 v1.9.8（現行最新バージョン）ではもちろん関数の呼び出しエラー。
+
+次に v1.10.0-bata1 でやってみる。
 
 ```bash
 $ tfenv use 1.10.0-beta1
@@ -182,8 +184,8 @@ You can apply this plan to save these new output values to the Terraform state, 
 
 テスト用のコードはここに
 
-@[code](https://github.com/officel/zenn/tree/main/terraform/v1.10.0-beta1_element/)
+@[github](https://github.com/officel/zenn/tree/main/terraform/v1.10.0-beta1_element/)
 
 おまけ。
 
-@[card](https://x.com/terraform_jp/status/1852017547283140823)
+@[tweet](https://x.com/terraform_jp/status/1852017547283140823)
