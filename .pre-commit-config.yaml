@@ -4,12 +4,25 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks.git
     rev: v5.0.0
     hooks:
+      - id: check-json
+        exclude: |
+          (?x)^(
+            backup/[\d|\w|_]+\/(.*?)|
+            docs/nodejs/ts_tutorial/tsconfig.json|
+            path/to/file3.json
+          )$
+      - id: check-yaml
+      - id: check-toml
+      - id: check-xml
+      - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace
+
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.4
     hooks:
       - id: actionlint
+
   - repo: https://github.com/jackdewinter/pymarkdown
     rev: v0.9.25
     hooks:
@@ -22,12 +35,14 @@ repos:
             backup/[\d|\w|_]+\/(.*?)|
             path/to/file3.py
           )$
+
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.35.1
     hooks:
       - id: yamllint
         args:
           - -c=.config/.yamllint
+
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v3.6.0
     hooks:
