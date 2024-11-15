@@ -12,6 +12,8 @@ repos:
             path/to/file3.json
           )$
       - id: check-yaml
+        args:
+          - --allow-multiple-documents
       - id: check-toml
       - id: check-xml
       - id: detect-private-key
