@@ -3,6 +3,10 @@
 
 version: '3'
 
+vars:
+  # 一連の処理のエラーを捕捉
+  ON_ERROR: '/tmp/task_on_error_{{base .TASKFILE_DIR}}'
+
 tasks:
   default:
     cmd: task --list --sort alphanumeric
@@ -113,13 +117,8 @@ tasks:
         - TITLE
         - BRANCH
         - TARGET
-        - ON_ERROR
     cmds:
-      # - defer: {task: _git:on_error, vars: {ON_ERROR: "{{.ON_ERROR}}"}}
-      - defer:
-          task: _git:on_error
-          vars:
-            ON_ERROR: "{{.ON_ERROR}}"
+      - defer: _git:on_error
       - touch {{.ON_ERROR}}
       - ls -l {{.ON_ERROR}}
       - task: _git:auto
