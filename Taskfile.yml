@@ -118,7 +118,8 @@ tasks:
         - BRANCH
         - TARGET
     cmds:
-      - defer: {task: _git:on_error}
+      - defer:
+          task: _git:on_error
       - touch {{.ON_ERROR}}
       - ls -l {{.ON_ERROR}}
       - task: _git:auto
