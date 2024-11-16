@@ -118,7 +118,7 @@ tasks:
         - BRANCH
         - TARGET
     cmds:
-      - defer: _git:on_error
+      - defer: {task: _git:on_error}
       - touch {{.ON_ERROR}}
       - ls -l {{.ON_ERROR}}
       - task: _git:auto
@@ -175,7 +175,7 @@ tasks:
       vars:
         - ON_ERROR
     cmds:
-      - defer: rm {{.ON_ERROR}}
+      - defer: rm -f {{.ON_ERROR}}
       - ls -l {{.ON_ERROR}}
       - cmd: git reset --mixed origin/HEAD
       # - task: _git:status
