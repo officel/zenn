@@ -9,7 +9,9 @@ vars:
 
 tasks:
   default:
-    cmd: task --list --sort alphanumeric
+    cmds:
+      - task --list --sort alphanumeric -t {{.TASKFILE}}
+      - gh issue list
     silent: true
 
   util:list:
