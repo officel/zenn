@@ -2,7 +2,7 @@ name: pre-commit
 
 on:
   schedule:
-    - cron: '0 15 * * MON'
+    - cron: '0 15 1 * *'
   workflow_dispatch:
   pull_request:
 

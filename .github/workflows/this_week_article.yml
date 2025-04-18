@@ -1,8 +1,8 @@
 name: 今週も記事を書こう！
 
 on:
-  schedule:
-    - cron: "0 15 * * SUN"
+  # schedule:
+  #   - cron: "0 15 * * SUN"
   workflow_dispatch:
 
 jobs:
