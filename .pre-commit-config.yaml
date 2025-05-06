@@ -39,14 +39,14 @@ repos:
           )$
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.0
+    rev: v1.37.1
     hooks:
       - id: yamllint
         args:
           - -c=.config/.yamllint
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v4.1.0
+    rev: v4.2.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
