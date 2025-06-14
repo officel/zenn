@@ -1,17 +1,21 @@
 # yaml-language-server: $schema=https://taskfile.dev/schema.json
 # https://taskfile.dev/
 
-version: '3'
+version: "3"
 
 vars:
   # 一連の処理のエラーを捕捉
-  ON_ERROR: '/tmp/task_on_error_{{base .TASKFILE_DIR}}'
+  ON_ERROR: "/tmp/task_on_error_{{base .TASKFILE_DIR}}"
+  # date command の差異を吸収しやすくる
+  DATE_I:
+    sh: date "+%Y-%m-%d"
 
 tasks:
   default:
     cmds:
       - task --list --sort alphanumeric -t {{.TASKFILE}}
       - gh issue list
+      - echo {{.DATE_I}}
     silent: true
 
   util:list:
@@ -44,7 +48,7 @@ tasks:
       _A: "__attention__.md"
       _T: "articles/__raki_template__.md"
       _F:
-        sh: echo "articles/$(date -I)_raki.md"
+        sh: echo "articles/{{.DATE_I}}_raki.md"
     preconditions:
       - test -f {{._T}}
     status:
@@ -65,13 +69,12 @@ tasks:
       - task: _git
         vars:
           TITLE:
-            sh: echo "blog(raki):" "$(date -I) {{.CLI_ARGS}}"
+            sh: echo "blog(raki):" "{{.DATE_I}} {{.CLI_ARGS}}"
           BRANCH:
-            sh: echo "blog/raki/$(date -I)"
+            sh: echo "blog/raki/{{.DATE_I}}"
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_raki
-
 
   terraform:
     desc: generate articles
@@ -83,7 +86,7 @@ tasks:
       _A: "__attention__.md"
       _T: "articles/__terraform__.md"
       _F:
-        sh: echo "articles/$(date -I)_terraform.md"
+        sh: echo "articles/{{.DATE_I}}_terraform.md"
     preconditions:
       - test -f {{._T}}
     status:
@@ -104,13 +107,12 @@ tasks:
       - task: _git
         vars:
           TITLE:
-            sh: echo "blog(terraform_jp):" "$(date -I) {{.CLI_ARGS}}"
+            sh: echo "blog(terraform_jp):" "{{.DATE_I}} {{.CLI_ARGS}}"
           BRANCH:
-            sh: echo "blog/terraform_jp/$(date -I)"
+            sh: echo "blog/terraform_jp/{{.DATE_I}}"
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_terraform_jp
-
 
   _git:
     summary: git automation
