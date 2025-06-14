@@ -2,7 +2,7 @@
 title: "Task(taskfile.dev) で zenn の記事執筆の前後を楽にする"
 emoji: "✍"
 type: "tech"
-topics: ["task", "taskfile", "taskfiledev", "git","github"]
+topics: ["task", "taskfile", "taskfiledev", "git", "github"]
 published: true
 ---
 
@@ -37,7 +37,7 @@ published: true
 
 - コードを見るのが早い
 - git fetch, checkout, add, commit, push を自動
-- （GitHub cliで）gh pr create, gh pr merge を自動
+- （GitHub cli で）gh pr create, gh pr merge を自動
 - テスト中はよくこけるし、やり直すの面倒なので、エラーが発生したら git reset
 - エラー処理の[マージ待ち](https://github.com/go-task/task/issues/1484)
 

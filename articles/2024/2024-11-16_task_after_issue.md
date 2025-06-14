@@ -1,8 +1,8 @@
 ---
 title: "go-task に以前挙げた課題のワークアラウンド"
 emoji: "🛠️"
-type: "tech"  # tech or idea
-topics: ["taskfile","task","go-task","taskfiledev"]
+type: "tech" # tech or idea
+topics: ["taskfile", "task", "go-task", "taskfiledev"]
 published: true
 ---
 

@@ -2,7 +2,7 @@
 title: "モダンなタスクランナーを求めて task (taskfile.dev) を使うまでの軌跡"
 emoji: "🏃"
 type: "tech"
-topics: ["task","taskfile.dev","make"]
+topics: ["task", "taskfiledev", "make"]
 published: true
 ---
 
@@ -32,17 +32,17 @@ published: true
 - モダンであること（後発であって先人のツールを超える何かであること）
 - 運用時に必要なものが増えたり手間がかかるものは避けたい
 - 特定の要件に寄ったものは避けたい
-- サーバ化は必要としていない（HashiCorp WayPointは違うということ）
-- ローカルでも（CI/CDなどの）サーバでも使いやすいとうれしい → ワークフロー的なものにできるといい
+- サーバ化は必要としていない（HashiCorp WayPoint は違うということ）
+- ローカルでも（CI/CD などの）サーバでも使いやすいとうれしい → ワークフロー的なものにできるといい
 - 更新が半年以上停滞しているものは避けたい（それはすでにモダンとは言わない）
 
 ## この時点で除外されるもの
 
-- Grunt 等の JS を必要とするビルダーは全部落選（JSのビルドは要件外なのと、それらをラップするランナーが欲しいので）
+- Grunt 等の JS を必要とするビルダーは全部落選（JS のビルドは要件外なのと、それらをラップするランナーが欲しいので）
 - Apache 系ビルドツールは落選（モダンじゃないってゆうか Maven とか使うなら GNU Make でいいでしょって）
 - [Waypoint by HashiCorp](https://www.waypointproject.io/)（リリース当時は良さげに見えたけどね。ローカルサーバは今回必要としてない）
 - [babashka](https://github.com/babashka/babashka)（bb ってコマンド名はタイプしやすくて良さげだけど）
-- [Hardhat](https://hardhat.org/)（JS系だし Ethereum に寄りたいわけでもないので）
+- [Hardhat](https://hardhat.org/)（JS 系だし Ethereum に寄りたいわけでもないので）
 - [Buffalo](https://gobuffalo.io/)（開発停止したっぽい？あと日本ではググラビリティが悪そうｗ）
 - [realize](https://github.com/oxequa/realize)（Go 用だし？）
 
@@ -56,9 +56,9 @@ published: true
 
 ## あると嬉しい機能
 
-- サブディレクトリ以下でも遡って設定を読み込める（makeにはない）
-- 引数を渡せる（makeでは擬似的な工夫で処理する）
-- テンプレート（Go系のツールだと go-template を食ってるものが多い）
+- サブディレクトリ以下でも遡って設定を読み込める（make にはない）
+- 引数を渡せる（make では擬似的な工夫で処理する）
+- テンプレート（Go 系のツールだと go-template を食ってるものが多い）
 - インクルード（別ファイルを読み込める）
 - 設定ファイルのヒエラルキー（プロジェクト用と個人用を別に管理できる）
 - env の読み込み

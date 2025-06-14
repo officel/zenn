@@ -1,8 +1,8 @@
 ---
 title: "Taskfile.yml のスタイルガイドに沿ったテンプレート"
 emoji: "💂"
-type: "tech"  # tech or idea
-topics: ["taskfile","task","go-task","taskfiledev"]
+type: "tech" # tech or idea
+topics: ["taskfile", "task", "go-task", "taskfiledev"]
 published: true
 ---
 
@@ -14,7 +14,7 @@ published: true
 # スタイルガイドの要約
 
 - 主要セクションは推奨される順序にする
-- インデントはスペース2つ
+- インデントはスペース 2 つ
 - メインセクションは空行で区切る
 - タスクを空行で区切る
 - 変数名には大文字だけ
@@ -31,7 +31,7 @@ published: true
 
 # 個人的に追加のガイド
 
-- 先頭におまじないと置いておくと言語サーバが使えるIDE（VS Code等）で幸せになれる
+- 先頭におまじないと置いておくと言語サーバが使える IDE（VS Code 等）で幸せになれる
 - `default` task は不用意なタスク実行を避けて、タスクのリスト表示にする
 - `util` 名前空間に共通処理を書いて include で共有するとよい（ベストなやり方が見つかっていないので今のところ同じファイルに書いている）
 - よく使うものは `desc` をなしにしてリストから消去

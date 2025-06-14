@@ -1,8 +1,8 @@
 ---
 title: "go-task に issue をあげた"
 emoji: "🤔"
-type: "tech"  # tech or idea
-topics: ["task","taskfile","issue"]
+type: "tech" # tech or idea
+topics: ["task", "taskfile", "taskfiledev", "issue"]
 published: true
 ---
 
@@ -23,8 +23,8 @@ published: true
 - `rm: オペランドがありません` という task とは関係がない処理のエラーだと思っていた
 - rm の引数にしている ON_ERROR のファイル名が渡されなくなった？
 - [一連の流れを scrap に書いた](https://zenn.dev/link/comments/7d0ee3b5f2f6fb)
-- とりあえず EXIT_CODE まわりは2回の更新を経て解消されたようだ
-- が、 `ignore_error:true` だとやはりダメ（EXIT_CODEが渡らない）
+- とりあえず EXIT_CODE まわりは 2 回の更新を経て解消されたようだ
+- が、 `ignore_error:true` だとやはりダメ（EXIT_CODE が渡らない）
 - また、defer で変数渡しがダメになったところがまだうまくいってない
 
 # 回避
@@ -37,7 +37,7 @@ published: true
 
 # まとめ
 
-- Make から移行して早4か月近く、バージョンアップで明確にバグったのははじめて
+- Make から移行して早 4 か月近く、バージョンアップで明確にバグったのははじめて
 - もっと Go 力をつけて、解消できるようになりたい
 - ignore_error は task からのエラーメッセージ（標準エラー出力される）を出したくないだけ
 - 機能的に修正されるか、エラーメッセージの抑止がフラグでコントロールできるようになればいいな
