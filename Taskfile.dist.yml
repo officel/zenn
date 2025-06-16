@@ -3,6 +3,13 @@
 
 version: "3"
 
+includes:
+  date:
+    taskfile: Taskfile.date.yml
+    optional: true
+    internal: false
+    flatten: false
+
 vars:
   # 一連の処理のエラーを捕捉
   ON_ERROR: "/tmp/task_on_error_{{base .TASKFILE_DIR}}"
