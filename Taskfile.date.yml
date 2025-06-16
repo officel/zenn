@@ -1,0 +1,181 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# https://taskfile.dev/
+
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - task --list --sort alphanumeric -t {{.TASKFILE}}
+    silent: true
+
+  samples:
+    desc: date samples
+    summary: |
+      # 日付処理のサンプルを出力
+
+      - date_modify は h,m,s,ns で時間を指定する（hだけ書いた）
+      - 前週、前日、翌日、翌週は単純な計算で問題ない
+      - 前後の年は年部分を加減算してフォーマットで処理すると楽（365日で計算すると、うるう年でバグる可能性に注意する）
+
+      # note
+      - toDate の戻り値は time で date の戻り値は string なので注意
+
+    aliases:
+      - s
+    vars:
+      # テスト用の任意の日付
+      # TEST_DATE: "2026-01-01 00:00:00"
+      # TEST_DATE: "2026-01-27 00:00:00"
+      # TEST_DATE: "2026-01-28 00:00:00"
+      # TEST_DATE: "2026-01-31 00:00:00"
+      # TEST_DATE: "2026-02-01 00:00:00"
+      # TEST_DATE: "2026-02-28 00:00:00"
+      # TEST_DATE: "2026-03-31 23:59:59"
+      TEST_DATE: "2026-09-16 13:45:30"
+
+      # 基準日（TEST_DATE か now を使う）
+      BASE_DATE: '{{toDate "2006-01-02 15:04:05" .TEST_DATE | date "2006-01-02 15:04:05"}}'
+      # BASE_DATE: '{{date "2006-01-02 15:04:05" now}}' # 現在日時を使う場合はこっち（string）
+
+      # 計算用変数
+      # 前後の西暦年は単純に増減するだけ。出力時に組み込めばOK
+      BASE_YEAR_PREV: '{{sub (date "2006" (toDate "2006-01-02 15:04:05" .BASE_DATE) | atoi) 1}}'  # 前年の西暦
+      BASE_YEAR_NEXT: '{{add (date "2006" (toDate "2006-01-02 15:04:05" .BASE_DATE) | atoi) 1}}'  # 翌年の西暦
+
+      # 前月を作るには、日*24*60*60+10 月初から今日の終わりまでの経過時間秒を算出し（10秒は予備）、今日からその秒数を引けばよい（だいたい前月末日になる）
+      BASE_DD_SEC: '{{mul (date "2" (toDate "2006-01-02 15:04:05" .BASE_DATE) | atoi) 86410}}'  # 日数を秒に変換(10秒は予備)
+      BASE_DD_SEC_STR: '{{printf "-%ss" .BASE_DD_SEC}}'  # 日数を秒に変換した文字列（マイナス符号付き。-86410s のような文字列）
+
+      # 次月を作るには、32 - 日（の時間数）を求めて、対象日に足すことで翌月の範疇に収まる（日はガタガタになる）
+      # 契約応答日みたいなのを求める場合は別の工夫が必要だけど、task 内で応答日を求める理由も特にないので放置
+      # 秒で処理するのは前月↑でやったので、こちらは時間で処理してみた（計算しやすいし）
+      BASE_DD_FOLLOW_HOUR: '{{mul (sub 32 (date "2" (toDate "2006-01-02 15:04:05" .BASE_DATE) | atoi)) 24}}'  # (32 - 日) * 24
+      BASE_DD_FOLLOW_HOUR_STR: '{{printf "+%sh" .BASE_DD_FOLLOW_HOUR}}'  # 進める時間を求めた文字列（+24h のような文字列）
+
+      FORMATS:
+        - ["Date", "Result"]
+        - ['---', '---']
+        - ['{{date "2006-01-02 15:04:05" now}}', "now"]
+        - ['{{.BASE_DATE}}', "BASE_DATE"]
+        - ['---', '---']
+        - ['{{.BASE_YEAR_PREV}}', "Prev year  : YYYY"]
+        - ['{{.BASE_YEAR_PREV}}-{{date "01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE)}}', "Prev year  : YYYY-MM-DD"]
+
+        - ['{{date "2006-01" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify .BASE_DD_SEC_STR)}}', "Prev month : YYYY-MM"]
+        - ['{{date "2006-01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify .BASE_DD_SEC_STR)}}', "Prev month : Last day of last month"]
+
+        - ['{{date "2006-01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify "-168h")}}', "Prev week  : 7 days ago"]
+        - ['{{date "2006-01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify "-24h")}}', "Prev day   : Yesterday"]
+        - ['{{date "2006-01-02 15:04:05" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify "-1h")}}', "Prev hour  : 1 hour ago"]
+
+        - ['{{.BASE_DATE}}', "BASE_DATE  *"]
+
+        - ['{{date "2006-01-02 15:04:05" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify "+1h")}}', "Next hour  : 1 hour later"]
+        - ['{{date "2006-01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify "+24h")}}', "Next day   : Tomorrow"]
+        - ['{{date "2006-01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify "+168h")}}', "Next week  : 7 days later"]
+
+        - ['{{date "2006-01" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify .BASE_DD_FOLLOW_HOUR_STR)}}', "Next month : YYYY-MM"]
+        - ['{{date "2006-01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE | date_modify .BASE_DD_FOLLOW_HOUR_STR)}}', "Next month : Last day of last month"]
+
+        - ['{{.BASE_YEAR_NEXT}}-{{date "01-02" (toDate "2006-01-02 15:04:05" .BASE_DATE)}}', "Next year  : YYYY-MM-DD"]
+        - ['{{.BASE_YEAR_NEXT}}', "Next year  : YYYY"]
+        - ['---', '---']
+
+    cmds:
+      - |
+        {{- range .FORMATS }}
+          {{- $result_date := index . 0 }}
+          {{- $note := index . 1 }}
+          echo {{ printf "\"| %-19s | %s |\"" $result_date $note }}
+        {{- end }}
+    silent: true
+
+  format-sequence:
+    desc: date format sample
+    summary: |
+      template を使って date function のフォーマットサンプルを出力
+      - こういうことであり https://www.pauladamsmith.com/blog/2011/05/go_time.html
+      - 説明が面倒なので寄せた https://developer.hashicorp.com/terraform/language/functions/formatdate
+      - 普段一番使うのが HCL というか terraform なだけ
+      - Go 以外の言語から流れてくるとわかりにくいよね
+    aliases:
+      - fs
+    vars:
+      BASE_DATE: "2026-09-16 13:45:30"
+      FORMATS:
+        - [YYYY, "2006", "年 4 桁"]
+        - [YY, "06", "年 2 桁"]
+        - [MMMM, "January", "月名（フル）"]
+        - [MMM, "Jan", "月名（短縮）"]
+        - [MM, "01", "月 2 桁"]
+        - [M, "1", "月 1 桁"]
+        - [DD, "02", "日 2 桁"]
+        - [D, "2", "日 1 桁"]
+        - [EEEE, "Monday", "曜日（フル）"]
+        - [EEE, "Mon", "曜日（短縮）"]
+        - [hh, "15", "時 24 時間表記 0 埋め"]
+        - [h, "15", "X 存在しない"]
+        - [HH, "03", "時 12 時間表記 0 埋め"]
+        - [H, "3", "時 12 時間表記 0 埋めなし"]
+        - [AA, "PM", "AM / PM"]
+        - [aa, "pm", "am / pm"]
+        - [mm, "04", "分 2 桁"]
+        - [m, "4", "分 1 桁"]
+        - [ss, "05", "秒 2 桁"]
+        - [s, "5", "秒 1 桁"]
+        - [ZZZZZ, "-07:00", "Timezone offset コロンあり"]
+        - [ZZZZ, "-0700", "Timezone offset コロンなし"]
+        - [ZZZ, "MST", "like UTC (例: JST)"]
+
+    cmds:
+      - |
+        echo {{.BASE_DATE}}
+        echo "| HCL   | Sprig     | Result     | Note               |"
+        echo "|-------|-----------|------------|--------------------|"
+        {{- $base := toDate "2006-01-02 15:04:05" .BASE_DATE }}
+        {{- range .FORMATS }}
+          {{- $hcl := index . 0 }}
+          {{- $sprig := index . 1 }}
+          {{- $note := index . 2 }}
+          {{- $out := date $sprig $base }}
+          echo {{ printf "\"| %-5s | %-9s | %-10s | %s |\"" $hcl $sprig $out $note }}
+        {{- end }}
+    silent: true
+
+  format-like-rfc:
+    desc: date format like RFC
+    summary: |
+      template で使える日付フォーマットサンプルを出力
+      - RFC 1123, RFC 3339, ISO 8601, YYYY-MM-DD など
+      - 時刻は BASE_DATE の文字列を変換して出力される
+    aliases:
+      - rfc
+    vars:
+      BASE_DATE: "2026-09-16 13:45:30"  # ここを変更
+      FORMATS:
+        - ["ISO 8601 like date -I", "2006-01-02", ""]
+        - ["ISO 8601 w/z TZ      ", "2006-01-02T15:04:05Z07:00", ""]  # tz はくっつくコロン有り
+        - ["ISO 5322 a.k.a Email ", "Mon, 02 Jan 2006 15:04:05 -0700", ""]  # tz は離れるコロン無し
+        - ["RFC 1123             ", "Mon, 02 Jan 2006 15:04:05 MST", ""]  # tz は名前だけ。時間を付けるのは z
+        - ["ISO 3339             ", "2006-01-02T15:04:05Z07:00", ""]  # tz はくっつくコロン有り
+        - ["YYYY-MM-DD HH:mm:ss  ", "2006-01-02 03:04:05", ""]
+        - ["YYYY-MM-DD hh:mm:ss  ", "2006-01-02 15:04:05", ""]
+        - ["YYYYMMDD             ", "20060102", ""]
+        - ["ISO / YMD            ", "2006-01-02", ""]
+        - ["USA / MDY            ", "01/02/2006", ""]
+        - ["EUR / DMY            ", "02/01/2006", ""]
+    cmds:
+      - |
+        echo {{.BASE_DATE}}
+        echo "| Format Name           | Sprig                           | Result                          | Note |"
+        echo "|-----------------------|---------------------------------|---------------------------------|------|"
+        {{- $base := toDate "2006-01-02 15:04:05" .BASE_DATE }}
+        {{- range .FORMATS }}
+          {{- $name := index . 0 }}
+          {{- $sprig := index . 1 }}
+          {{- $note := index . 2 }}
+          {{- $out := date $sprig $base }}
+          echo {{ printf "\"| %-21s | %-31s | %-31s | %s |\"" $name $sprig $out $note }}
+        {{- end }}
+    silent: true
