@@ -53,8 +53,7 @@ tasks:
     vars:
       _A: "__attention__.md"
       _T: "articles/__raki_template__.md"
-      _F:
-        sh: echo "articles/{{.DATE_I}}_raki.md"
+      _F: "articles/{{.DATE_I}}_raki.md"
     preconditions:
       - test -f {{._T}}
     status:
@@ -74,10 +73,8 @@ tasks:
     cmds:
       - task: _git
         vars:
-          TITLE:
-            sh: echo "blog(raki):" "{{.DATE_I}} {{.CLI_ARGS}}"
-          BRANCH:
-            sh: echo "blog/raki/{{.DATE_I}}"
+          TITLE: 'blog(raki): {{.DATE_I}} {{.CLI_ARGS}}'
+          BRANCH: 'blog/raki/{{.DATE_I}}'
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_raki
@@ -91,8 +88,7 @@ tasks:
     vars:
       _A: "__attention__.md"
       _T: "articles/__terraform__.md"
-      _F:
-        sh: echo "articles/{{.DATE_I}}_terraform.md"
+      _F: "articles/{{.DATE_I}}_terraform.md"
     preconditions:
       - test -f {{._T}}
     status:
@@ -112,10 +108,8 @@ tasks:
     cmds:
       - task: _git
         vars:
-          TITLE:
-            sh: echo "blog(terraform_jp):" "{{.DATE_I}} {{.CLI_ARGS}}"
-          BRANCH:
-            sh: echo "blog/terraform_jp/{{.DATE_I}}"
+          TITLE: 'blog(terraform_jp): {{.DATE_I}} {{.CLI_ARGS}}'
+          BRANCH: 'blog/terraform_jp/{{.DATE_I}}'
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_terraform_jp
