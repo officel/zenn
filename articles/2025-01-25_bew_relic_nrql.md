@@ -1,8 +1,8 @@
 ---
 title: "New Relic の NRQL でメトリクスをグループ化"
 emoji: "📈"
-type: "tech"  # tech or idea
-topics: ["newrelic","nrql"]
+type: "tech" # tech or idea
+topics: ["newrelic", "nrql"]
 published: true
 ---
 
@@ -19,18 +19,18 @@ published: true
 
 - 以前は DataDog だったんだけど、最近 New Relic を使っている
 - 見た目とか使い方の違いに慣れないといけないなと思って nrql を勉強している
-- （手軽さとわかりやすさで言ったらDataDogのほうが楽だなぁ）
+- （手軽さとわかりやすさで言ったら DataDog のほうが楽だなぁ）
 
 # nrql
 
-- [NRQLを始めましょう：データの言語 | New Relic Documentation](https://docs.newrelic.com/jp/docs/nrql/get-started/introduction-nrql-new-relics-query-language/)
+- [NRQL を始めましょう：データの言語 | New Relic Documentation](https://docs.newrelic.com/jp/docs/nrql/get-started/introduction-nrql-new-relics-query-language/)
 - ANSI SQL と同じような感じで使える
 - 要は select 欲しいもの from どこから
 - 書き順変えても動く（式的には FROM どこから WITH こうやって SELECT これ、みたいな感じ）
 
 # メトリクス名（metric）をグループ化したらわかりやすいかなって
 
-- [Metricデータタイプの問い合わせ | New Relic Documentation](https://docs.newrelic.com/jp/docs/data-apis/understand-data/metric-data/query-metric-data-type/#explore-metric-data)
+- [Metric データタイプの問い合わせ | New Relic Documentation](https://docs.newrelic.com/jp/docs/data-apis/understand-data/metric-data/query-metric-data-type/#explore-metric-data)
 
 ```nrql
 # アカウント内のすべてのメトリック名を一覧表示
