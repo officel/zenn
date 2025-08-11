@@ -1,8 +1,8 @@
 name: 今週も記事を書こう！
 
 on:
-  # schedule:
-  #   - cron: "0 15 * * SUN"
+  schedule:
+    - cron: "0 15 6,20 * *"
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: Date
         id: current
         env:
-          TZ: 'Asia/Tokyo'
+          TZ: "Asia/Tokyo"
         shell: bash
         run: |
           echo "date=$(date +%m/%d)" >> "$GITHUB_OUTPUT"
