@@ -12,7 +12,7 @@ published: true
 - せっかくだからマーケットプレイスで公開するところまで持ってった
 - SVBT Simple Visual Bar Timer です
 
-@[card]([Simple Visual Bar Timer - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=officel.simple-visual-bar-timer))
+@[card](https://marketplace.visualstudio.com/items?itemName=officel.simple-visual-bar-timer)
 
 # AI と戯れ
 
@@ -131,4 +131,4 @@ SVBT $
 - 最後までもっていく（作る、正しく公開する、ブログを書く、あとは育てる）ための熱量が違うからね
 - よかったら使ってみて感想などいただけると喜びますｗ
 
-@[card]([Simple Visual Bar Timer - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=officel.simple-visual-bar-timer))
+@[card](https://marketplace.visualstudio.com/items?itemName=officel.simple-visual-bar-timer)
