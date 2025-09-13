@@ -58,3 +58,4 @@ jobs:
             - この issue はネタのメモに使ってよい
             - 記事を書いたら issue number を入れて PR を出す
             - 自動で閉じても閉じなくてもよい、ことにする
+            - 記事を書いたら[scrap に追加しよう](https://zenn.dev/raki/scraps/1d9a9d0819c285)
