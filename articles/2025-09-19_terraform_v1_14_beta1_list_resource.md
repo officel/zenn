@@ -56,6 +56,14 @@ list "azurerm_storage_account" "this" {
 # 実行
 
 ```bash
+# terraform のバージョンをあげる
+tfenv list-remote | head
+# たいてい一番上が一番新しいので
+tfenv list-remote | head -1 > .terraform-version
+# 確認
+cat .terraform-version
+terraform version
+
 # いつもの初期化
 terraform init --upgrade
 terraform fmt
