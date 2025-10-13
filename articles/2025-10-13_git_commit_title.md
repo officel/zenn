@@ -31,13 +31,13 @@ published: true
 - 内容が推測どおりのコミットはよいコミットのはずなので、なぜよいのかを考える
 - 内容が推測できないコミットタイトルはよくないコミットのはずなので、なぜよくないのかを考える
 
-:::message info
+:::message
 手直しするとしたらどのように書くかを考える
 :::
 
 ## conventional commit を使う
 
-@[card](https://www.conventionalcommits.org/)
+@[card](https://www.conventionalcommits.org/en/v1.0.0/)
 
 - [Conventional Commit の TYPE 選択フロー](https://zenn.dev/raki/articles/2025-07-25_conventional_commit)
 - 手癖でこの型で書けるようにする
