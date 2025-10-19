@@ -1,0 +1,19 @@
+# zenn
+
+[raki | Zenn](https://zenn.dev/raki)
+
+<!-- prettier-ignore-start -->
+<!-- AUTO-GENERATED START -->
+
+{{- $currentYear := "" }}
+{{- range (ds "articles") }}
+  {{- if and (ne .year "") (ne .year $currentYear) }}
+
+## {{ .year }}
+{{$currentYear = .year }}
+  {{- end }}
+- [{{ .date }}] [{{ .title }}]({{ .path }})
+{{- end }}
+
+<!-- AUTO-GENERATED END -->
+<!-- prettier-ignore-end -->
