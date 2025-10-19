@@ -52,7 +52,7 @@ tasks:
       - r
     vars:
       _A: "__attention__.md"
-      _T: "articles/__raki_template__.md"
+      _T: "__raki_template__.md"
       _F: "articles/{{.DATE_I}}_raki.md"
     preconditions:
       - test -f {{._T}}
@@ -73,8 +73,8 @@ tasks:
     cmds:
       - task: _git
         vars:
-          TITLE: 'blog(raki): {{.DATE_I}} {{.CLI_ARGS}}'
-          BRANCH: 'blog/raki/{{.DATE_I}}'
+          TITLE: "blog(raki): {{.DATE_I}} {{.CLI_ARGS}}"
+          BRANCH: "blog/raki/{{.DATE_I}}"
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_raki
@@ -87,7 +87,7 @@ tasks:
       - t
     vars:
       _A: "__attention__.md"
-      _T: "articles/__terraform__.md"
+      _T: "__terraform__.md"
       _F: "articles/{{.DATE_I}}_terraform.md"
     preconditions:
       - test -f {{._T}}
@@ -108,8 +108,8 @@ tasks:
     cmds:
       - task: _git
         vars:
-          TITLE: 'blog(terraform_jp): {{.DATE_I}} {{.CLI_ARGS}}'
-          BRANCH: 'blog/terraform_jp/{{.DATE_I}}'
+          TITLE: "blog(terraform_jp): {{.DATE_I}} {{.CLI_ARGS}}"
+          BRANCH: "blog/terraform_jp/{{.DATE_I}}"
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_terraform_jp
@@ -147,6 +147,8 @@ tasks:
       - git fetch --prune --all
       - git checkout origin/HEAD
       - git add {{.TARGET}}
+      - generate-readme.sh
+      - git add README.md
       - git commit -m"{{.TITLE}}"
       - git push origin HEAD:refs/heads/{{.BRANCH}} -f
 
