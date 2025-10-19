@@ -1,5 +1,7 @@
 # zenn
 
+[![Likes](https://badgen.org/img/zenn/raki/likes?style=plastic)](https://zenn.dev/raki) [![Followers](https://badgen.org/img/zenn/raki/followers?style=plastic)](https://zenn.dev/raki) [![Articles](https://badgen.org/img/zenn/raki/articles?style=plastic)](https://zenn.dev/raki) [![Books](https://badgen.org/img/zenn/raki/books?style=plastic)](https://zenn.dev/raki?tab=books) [![Scraps](https://badgen.org/img/zenn/raki/scraps?style=plastic)](https://zenn.dev/raki?tab=scraps)
+
 [raki | Zenn](https://zenn.dev/raki)
 
 <!-- prettier-ignore-start -->
