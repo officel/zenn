@@ -1,9 +1,12 @@
 # zenn
 
-[raki | Zenn](https://zenn.dev/raki)
+[![Likes](https://badgen.org/img/zenn/raki/likes?style=for-the-badge)](https://zenn.dev/raki)
+[![Followers](https://badgen.org/img/zenn/raki/followers?style=for-the-badge)](https://zenn.dev/raki)
+[![Articles](https://badgen.org/img/zenn/raki/articles?style=for-the-badge)](https://zenn.dev/raki)
+[![Books](https://badgen.org/img/zenn/raki/books?style=for-the-badge)](https://zenn.dev/raki?tab=books)
+[![Scraps](https://badgen.org/img/zenn/raki/scraps?style=for-the-badge)](https://zenn.dev/raki?tab=scraps)
 
 <!-- prettier-ignore-start -->
-<!-- AUTO-GENERATED START -->
 
 ## 2025
 
@@ -101,5 +104,4 @@
 - [2024-05-13] [terraform-jp @ zenn 始めました](articles/2024/2024-05-13_terraform_jp.md)
 - [2024-05-11] [自己紹介](articles/2024/2024-05-11_raki_self.md)
 
-<!-- AUTO-GENERATED END -->
 <!-- prettier-ignore-end -->
