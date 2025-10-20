@@ -15,7 +15,7 @@
 ## {{ .year }}
 {{$currentYear = .year }}
   {{- end }}
-- [{{ .date }}] [{{ .title }}]({{ .path }})
+- [{{ .date }}] [{{ .title }}](https://zenn.dev/raki/articles/{{ .filename | strings.TrimSuffix ".md" }})
 {{- end }}
 
 <!-- prettier-ignore-end -->

@@ -12,11 +12,11 @@ while IFS= read -r file; do
     date_prefix="${BASH_REMATCH[1]}"
   fi
 
-  # frontmatter title 抽出
+  # front matter title 抽出
   title=$(awk '
-    BEGIN { in_frontmatter=0; title="" }
-    /^---$/ { in_frontmatter = !in_frontmatter; next }
-    in_frontmatter && /^title:/ {
+    BEGIN { in_front_matter=0; title="" }
+    /^---$/ { in_front_matter = !in_front_matter; next }
+    in_front_matter && /^title:/ {
       sub(/^title:[ \t]*/, ""); title=$0
       gsub(/^["'\'' ]+|["'\'' ]+$/,"",title)
       exit
@@ -31,8 +31,12 @@ while IFS= read -r file; do
     year="${BASH_REMATCH[1]}"
   fi
 
-  jq --arg path "$file" --arg title "$title" --arg date "$date_prefix" --arg year "$year" \
-    '. + [{"path":$path,"title":$title,"date":$date,"year":$year}]' articles.json \
+  jq --arg path     "$file" \
+     --arg filename "$filename" \
+     --arg title    "$title" \
+     --arg date     "$date_prefix" \
+     --arg year     "$year" \
+    '. + [{"path":$path,"filename":$filename,"title":$title,"date":$date,"year":$year}]' articles.json \
     > articles.tmp.json
   mv articles.tmp.json articles.json
 done < <(find articles -type f -name '*.md')
