@@ -8,7 +8,8 @@
 
 <!-- prettier-ignore-start -->
 
-## 2025
+<details open>
+<summary>2025 年の記事</summary>
 
 - 2025-10-19 [ [:memo:](articles/2025-10-19_prek_alternative_pre-commit.md) _ ] [prek を使ってみる ADR - alternative pre-commit -](https://zenn.dev/raki/articles/2025-10-19_prek_alternative_pre-commit)
 - 2025-10-18 [ [:memo:](articles/2025-10-18_github_cleaning.md) _ ] [GitHub のリポジトリを掃除しよう](https://zenn.dev/raki/articles/2025-10-18_github_cleaning)
@@ -37,7 +38,10 @@
 - 2025-01-18 [ [:memo:](articles/2025-01-18_2_marp.md) _ ] [marp](https://zenn.dev/raki/articles/2025-01-18_2_marp)
 - 2025-01-18 [ [:memo:](articles/2025-01-18_1.md) _ ] [掃除して再開](https://zenn.dev/raki/articles/2025-01-18_1)
 
-## 2024
+</details>
+
+<details>
+<summary>2024 年の記事</summary>
 
 - 2024-12-20 [ [:memo:](articles/2024/2024-12-20_raki.md) _ ] [go-task のデフォルトタスク](https://zenn.dev/raki/articles/2024-12-20_raki)
 - 2024-12-15 [ [:memo:](articles/2024/2024-12-15_task.md) _ ] [taskfile.dist.yml を使う](https://zenn.dev/raki/articles/2024-12-15_task)
@@ -103,5 +107,7 @@
 - 2024-05-14 [ [:memo:](articles/2024/2024-05-14_terraform_test_xml.md) T ] [terraform test -junit-xml を試してみる](https://zenn.dev/raki/articles/2024-05-14_terraform_test_xml)
 - 2024-05-13 [ [:memo:](articles/2024/2024-05-13_terraform_jp.md) T ] [terraform-jp @ zenn 始めました](https://zenn.dev/raki/articles/2024-05-13_terraform_jp)
 - 2024-05-11 [ [:memo:](articles/2024/2024-05-11_raki_self.md) _ ] [自己紹介](https://zenn.dev/raki/articles/2024-05-11_raki_self)
+
+</details>
 
 <!-- prettier-ignore-end -->
