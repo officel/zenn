@@ -15,7 +15,11 @@
 ## {{ .year }}
 {{$currentYear = .year }}
   {{- end }}
-- [{{ .date }}] [{{ .title }}](https://zenn.dev/raki/articles/{{ .filename | strings.TrimSuffix ".md" }})
+- {{ .date }} [
+{{- $no_lf := ""}} [:memo:]({{ .path }})
+{{- if eq .publication_name "none" }} _ {{- end -}}
+{{- if eq .publication_name "terraform_jp" }} T {{- end -}}
+{{- $no_lf := ""}} ] [{{ .title }}](https://zenn.dev/raki/articles/{{ .filename | strings.TrimSuffix ".md" }})
 {{- end }}
 
 <!-- prettier-ignore-end -->
