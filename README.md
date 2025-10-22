@@ -85,6 +85,7 @@
 <details open>
 <summary>2025 年の記事</summary>
 
+- 2025-10-23 [ [:memo:](articles/2025-10-23_terraform-docs.md) ] [これから始める terraform-docs](https://zenn.dev/terraform_jp/articles/2025-10-23_terraform-docs)
 - 2025-10-03 [ [:memo:](articles/2025-10-03_terraform_variables.md) ] [terraform アンチパターン variable](https://zenn.dev/terraform_jp/articles/2025-10-03_terraform_variables)
 - 2025-09-19 [ [:memo:](articles/2025-09-19_terraform_v1_14_beta1_list_resource.md) ] [terraform v1.14.0 で追加予定の list resource を試してみた](https://zenn.dev/terraform_jp/articles/2025-09-19_terraform_v1_14_beta1_list_resource)
 - 2025-09-14 [ [:memo:](articles/2025-09-14_terraform_moved_removed.md) ] [terraform の細かすぎて伝わらない小ネタ module と moved と removed](https://zenn.dev/terraform_jp/articles/2025-09-14_terraform_moved_removed)

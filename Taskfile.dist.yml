@@ -147,7 +147,7 @@ tasks:
       - git fetch --prune --all
       - git checkout origin/HEAD
       - git add {{.TARGET}}
-      - generate-readme.sh
+      - ./generate-readme.sh
       - git add README.md
       - git commit -m"{{.TITLE}}"
       - git push origin HEAD:refs/heads/{{.BRANCH}} -f
