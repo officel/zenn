@@ -8,10 +8,13 @@
 
 <!-- prettier-ignore-start -->
 
+## 投稿一覧
+
 <details open>
 
 {{- $currentYear := "" }}
 {{- range (ds "articles") }}
+  {{- if ne .publication_name "none" }}{{- continue }}{{- end }}
   {{- if and (ne .year "") (ne .year $currentYear) (ne $currentYear "") }}
 
 </details>
@@ -24,9 +27,31 @@
   {{- end }}
 - {{ .date }} [
 {{- $no_lf := ""}} [:memo:]({{ .path }})
-{{- if eq .publication_name "none" }} _ {{- end -}}
-{{- if eq .publication_name "terraform_jp" }} T {{- end -}}
 {{- $no_lf := ""}} ] [{{ .title }}](https://zenn.dev/raki/articles/{{ .filename | strings.TrimSuffix ".md" }})
+{{- end }}
+
+</details>
+
+## terraform_jp publication での投稿一覧
+
+<details open>
+
+{{- $currentYear := "" }}
+{{- range (ds "articles") }}
+  {{- if ne .publication_name "terraform_jp" }}{{- continue }}{{- end }}
+  {{- if and (ne .year "") (ne .year $currentYear) (ne $currentYear "") }}
+
+</details>
+
+<details>
+  {{- end }}
+  {{- if and (ne .year "") (ne .year $currentYear) }}
+<summary>{{ .year }} 年の記事</summary>
+{{$currentYear = .year }}
+  {{- end }}
+- {{ .date }} [
+{{- $no_lf := ""}} [:memo:]({{ .path }})
+{{- $no_lf := ""}} ] [{{ .title }}](https://zenn.dev/terraform_jp/articles/{{ .filename | strings.TrimSuffix ".md" }})
 {{- end }}
 
 </details>
