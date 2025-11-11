@@ -85,6 +85,7 @@
 <details open>
 <summary>2025 年の記事</summary>
 
+- 2025-11-11 [ [:memo:](articles/2025-11-11_terraform_trivy.md) ] [これから始める trivy](https://zenn.dev/terraform_jp/articles/2025-11-11_terraform_trivy)
 - 2025-11-03 [ [:memo:](articles/2025-11-03_terraform_tflint.md) ] [これから始める tflint](https://zenn.dev/terraform_jp/articles/2025-11-03_terraform_tflint)
 - 2025-10-23 [ [:memo:](articles/2025-10-23_terraform-docs.md) ] [これから始める terraform-docs](https://zenn.dev/terraform_jp/articles/2025-10-23_terraform-docs)
 - 2025-10-03 [ [:memo:](articles/2025-10-03_terraform_variables.md) ] [terraform アンチパターン variable](https://zenn.dev/terraform_jp/articles/2025-10-03_terraform_variables)
