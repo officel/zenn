@@ -13,6 +13,7 @@
 <details open>
 <summary>2025 年の記事</summary>
 
+- 2025-11-21 [ [:memo:](articles/2025-11-21_task_git.md) ] [git の設定を task でやりかけてやめた話](https://zenn.dev/raki/articles/2025-11-21_task_git)
 - 2025-10-19 [ [:memo:](articles/2025-10-19_prek_alternative_pre-commit.md) ] [prek を使ってみる ADR - alternative pre-commit -](https://zenn.dev/raki/articles/2025-10-19_prek_alternative_pre-commit)
 - 2025-10-18 [ [:memo:](articles/2025-10-18_github_cleaning.md) ] [GitHub のリポジトリを掃除しよう](https://zenn.dev/raki/articles/2025-10-18_github_cleaning)
 - 2025-10-14 [ [:memo:](articles/2025-10-14_github_recent_activity.md) ] [GitHub の Dashboard から Recent Activity が消えてしまったので](https://zenn.dev/raki/articles/2025-10-14_github_recent_activity)
