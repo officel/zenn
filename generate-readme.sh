@@ -54,7 +54,7 @@ while IFS= read -r file; do
     '. + [{"path":$path,"filename":$filename,"title":$title,"date":$date,"year":$year,"publication_name":$pub_name}]' articles.json \
     > articles.tmp.json
   mv articles.tmp.json articles.json
-done < <(find articles -type f -name '*.md')
+done < <(find articles -type f -not -name '__*.md' -name '*.md')
 
 # 日付順に降順ソート
 jq 'sort_by(.date) | reverse' articles.json > articles.sorted.json
