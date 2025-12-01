@@ -13,6 +13,7 @@
 <details open>
 <summary>2025 年の記事</summary>
 
+- 2025-12-02 [ [:memo:](articles/2025-12-02_vscode_restore.md) ] [VS Code の設定見直しの習慣](https://zenn.dev/raki/articles/2025-12-02_vscode_restore)
 - 2025-11-21 [ [:memo:](articles/2025-11-21_task_git.md) ] [git の設定を task でやりかけてやめた話](https://zenn.dev/raki/articles/2025-11-21_task_git)
 - 2025-10-19 [ [:memo:](articles/2025-10-19_prek_alternative_pre-commit.md) ] [prek を使ってみる ADR - alternative pre-commit -](https://zenn.dev/raki/articles/2025-10-19_prek_alternative_pre-commit)
 - 2025-10-18 [ [:memo:](articles/2025-10-18_github_cleaning.md) ] [GitHub のリポジトリを掃除しよう](https://zenn.dev/raki/articles/2025-10-18_github_cleaning)
