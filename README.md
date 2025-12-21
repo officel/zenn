@@ -13,6 +13,7 @@
 <details open>
 <summary>2025 年の記事</summary>
 
+- 2025-12-22 [ [:memo:](articles/2025-12-22_raki.md) ] [2025年を振り返る前に週次振り返りを強化する task を書いてみた](https://zenn.dev/raki/articles/2025-12-22_raki)
 - 2025-12-17 [ [:memo:](articles/2025-12-17_raki.md) ] [git commit -v 時に git log を追加で見せる](https://zenn.dev/raki/articles/2025-12-17_raki)
 - 2025-12-14 [ [:memo:](articles/2025-12-14_raki.md) ] [pre-commit の ruff が ruff-check になってた](https://zenn.dev/raki/articles/2025-12-14_raki)
 - 2025-12-06 [ [:memo:](articles/2025-12-06_tsundoku.md) ] [今年積んだ本](https://zenn.dev/raki/articles/2025-12-06_tsundoku)
