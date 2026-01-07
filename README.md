@@ -90,6 +90,13 @@
 ## terraform_jp publication での投稿一覧
 
 <details open>
+<summary>2026 年の記事</summary>
+
+- 2026-01-07 [ [:memo:](articles/2026-01-07_terraform_sort_distinct_flatten.md) ] [terraform の細かすぎて伝わらない小ネタ list 型には sort distinct flatten](https://zenn.dev/terraform_jp/articles/2026-01-07_terraform_sort_distinct_flatten)
+
+</details>
+
+<details>
 <summary>2025 年の記事</summary>
 
 - 2025-11-23 [ [:memo:](articles/2025-11-23_terraform_for_each_with_type.md) ] [terraform の細かすぎて伝わらない小ネタ for_each と型](https://zenn.dev/terraform_jp/articles/2025-11-23_terraform_for_each_with_type)
