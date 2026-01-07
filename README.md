@@ -11,6 +11,13 @@
 ## 投稿一覧
 
 <details open>
+<summary>2026 年の記事</summary>
+
+- 2026-01-08 [ [:memo:](articles/2026-01-08_dotfiles.md) ] [dotfiles リポジトリの式年遷宮](https://zenn.dev/raki/articles/2026-01-08_dotfiles)
+
+</details>
+
+<details>
 <summary>2025 年の記事</summary>
 
 - 2025-12-22 [ [:memo:](articles/2025-12-22_raki.md) ] [2025年を振り返る前に週次振り返りを強化する task を書いてみた](https://zenn.dev/raki/articles/2025-12-22_raki)
