@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-02-13 [ [:memo:](articles/2026-02-13_deepwiki.md) ] [DeepWiki の見直し](https://zenn.dev/raki/articles/2026-02-13_deepwiki)
 - 2026-02-11 [ [:memo:](articles/2026-02-11_azure_cli.md) ] [azure cli で一番短いタイプ数のコマンド](https://zenn.dev/raki/articles/2026-02-11_azure_cli)
 - 2026-02-08 [ [:memo:](articles/2026-02-08_select_tools.md) ] [技術選定はツール比較ではなく破綻単位で考えるのがいいんじゃないかなって](https://zenn.dev/raki/articles/2026-02-08_select_tools)
 - 2026-01-08 [ [:memo:](articles/2026-01-08_dotfiles.md) ] [dotfiles リポジトリの式年遷宮](https://zenn.dev/raki/articles/2026-01-08_dotfiles)
