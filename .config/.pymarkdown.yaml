@@ -18,6 +18,8 @@ plugins:
     enabled: false
   ul-style:
     enabled: false
+  no-bare-urls:
+    enabled: false
 extensions:
   front-matter:
     enabled: true

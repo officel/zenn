@@ -102,6 +102,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-02-22 [ [:memo:](articles/2026-02-22_terraform_docs_install_actions.md) ] [GitHub Actions で terraform-docs をインストール](https://zenn.dev/terraform_jp/articles/2026-02-22_terraform_docs_install_actions)
 - 2026-02-04 [ [:memo:](articles/2026-02-04_terraform_type.md) ] [terraform の細かすぎて伝わらない小ネタ モジュール化の際の variables type](https://zenn.dev/terraform_jp/articles/2026-02-04_terraform_type)
 - 2026-01-07 [ [:memo:](articles/2026-01-07_terraform_sort_distinct_flatten.md) ] [terraform の細かすぎて伝わらない小ネタ list 型には sort distinct flatten](https://zenn.dev/terraform_jp/articles/2026-01-07_terraform_sort_distinct_flatten)
 
