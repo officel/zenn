@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-03-09 [ [:memo:](articles/2026-03-09_crlf.md) ] [リポジトリに crlf のファイル](https://zenn.dev/raki/articles/2026-03-09_crlf)
 - 2026-03-08 [ [:memo:](articles/2026-03-08_vscode_keybindings.md) ] [VS Code の特選キーボードショートカットその２](https://zenn.dev/raki/articles/2026-03-08_vscode_keybindings)
 - 2026-02-13 [ [:memo:](articles/2026-02-13_deepwiki.md) ] [DeepWiki の見直し](https://zenn.dev/raki/articles/2026-02-13_deepwiki)
 - 2026-02-11 [ [:memo:](articles/2026-02-11_azure_cli.md) ] [azure cli で一番短いタイプ数のコマンド](https://zenn.dev/raki/articles/2026-02-11_azure_cli)
