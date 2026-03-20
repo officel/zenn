@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-03-20 [ [:memo:](articles/2026-03-20_how_about_using_github.md) ] [旅行の計画を GitHub で](https://zenn.dev/raki/articles/2026-03-20_how_about_using_github)
 - 2026-03-19 [ [:memo:](articles/2026-03-19_network_incident.md) ] [回線障害で困ったので個人的なポストモーテム](https://zenn.dev/raki/articles/2026-03-19_network_incident)
 - 2026-03-09 [ [:memo:](articles/2026-03-09_crlf.md) ] [リポジトリに crlf のファイル](https://zenn.dev/raki/articles/2026-03-09_crlf)
 - 2026-03-08 [ [:memo:](articles/2026-03-08_vscode_keybindings.md) ] [VS Code の特選キーボードショートカットその２](https://zenn.dev/raki/articles/2026-03-08_vscode_keybindings)
