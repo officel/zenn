@@ -139,7 +139,7 @@ tasks:
     aliases:
       - up
     cmds:
-      - pre-commit uninstall
+      - pre-commit uninstall || echo "pre-commit not found, skipping uninstall."
       - prek install
       - prek autoupdate --freeze
       - pinact run -u

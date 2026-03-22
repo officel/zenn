@@ -25,6 +25,11 @@ repos:
     hooks:
       - id: actionlint
 
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: ea2eb407b4cbce87cf0d502f36578950494f5ac9  # frozen: v1.23.1
+    hooks:
+      - id: zizmor
+
   - repo: https://github.com/jackdewinter/pymarkdown
     rev: 6d3c1b70d44ea2202b23552af93aca3b5017ee83  # frozen: v0.9.36
     hooks:
