@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-03-22 [ [:memo:](articles/2026-03-22_repos_cleanup.md) ] [GitHub Actions と pre-commit-config を SHA pinning](https://zenn.dev/raki/articles/2026-03-22_repos_cleanup)
 - 2026-03-20 [ [:memo:](articles/2026-03-20_how_about_using_github.md) ] [旅行の計画を GitHub で](https://zenn.dev/raki/articles/2026-03-20_how_about_using_github)
 - 2026-03-20 [ [:memo:](articles/2026-03-20_github_actions_cron_tz.md) ] [GitHub Actions の cron にタイムゾーンが指定できるようになった、が。。。](https://zenn.dev/raki/articles/2026-03-20_github_actions_cron_tz)
 - 2026-03-19 [ [:memo:](articles/2026-03-19_network_incident.md) ] [回線障害で困ったので個人的なポストモーテム](https://zenn.dev/raki/articles/2026-03-19_network_incident)
