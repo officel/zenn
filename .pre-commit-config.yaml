@@ -2,7 +2,7 @@
 # https://pre-commit.com/
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks.git
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
     hooks:
       - id: check-json
         exclude: |
@@ -21,12 +21,12 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.11
+    rev: 393031adb9afb225ee52ae2ccd7a5af5525e03e8  # frozen: v1.7.11
     hooks:
       - id: actionlint
 
   - repo: https://github.com/jackdewinter/pymarkdown
-    rev: v0.9.36
+    rev: 6d3c1b70d44ea2202b23552af93aca3b5017ee83  # frozen: v0.9.36
     hooks:
       - id: pymarkdown
         args:
@@ -39,14 +39,14 @@ repos:
           )$
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.38.0
+    rev: cba56bcde1fdd01c1deb3f945e69764c291a6530  # frozen: v1.38.0
     hooks:
       - id: yamllint
         args:
           - -c=.config/.yamllint
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v4.4.0
+    rev: 91ab4bf57e58b32adf1a122681f6ebe164d081c8  # frozen: v4.4.0
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
