@@ -110,6 +110,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-04-12 [ [:memo:](articles/2026-04-12_terraform_pre-commit.md) ] [pre-commit と terraform 2026年版](https://zenn.dev/terraform_jp/articles/2026-04-12_terraform_pre-commit)
 - 2026-03-07 [ [:memo:](articles/2026-03-07_terraform_pre-commit.md) ] [HCP Terraform と pre-commit-terraform](https://zenn.dev/terraform_jp/articles/2026-03-07_terraform_pre-commit)
 - 2026-02-22 [ [:memo:](articles/2026-02-22_terraform_docs_install_actions.md) ] [GitHub Actions で terraform-docs をインストール](https://zenn.dev/terraform_jp/articles/2026-02-22_terraform_docs_install_actions)
 - 2026-02-04 [ [:memo:](articles/2026-02-04_terraform_type.md) ] [terraform の細かすぎて伝わらない小ネタ モジュール化の際の variables type](https://zenn.dev/terraform_jp/articles/2026-02-04_terraform_type)
