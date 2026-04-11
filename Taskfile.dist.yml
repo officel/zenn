@@ -51,7 +51,6 @@ tasks:
     aliases:
       - r
     vars:
-      _A: "__attention__.md"
       _T: "__raki_template__.md"
       _F: "articles/{{.DATE_I}}_raki.md"
     preconditions:
@@ -61,7 +60,6 @@ tasks:
     cmds:
       - cp {{._T}} {{._F}}
       - code {{._F}}
-      - cat {{._A}}
 
   raki:git:
     desc: auto git, use -- COMMIT TITLE
@@ -86,7 +84,6 @@ tasks:
     aliases:
       - t
     vars:
-      _A: "__attention__.md"
       _T: "__terraform__.md"
       _F: "articles/{{.DATE_I}}_terraform.md"
     preconditions:
@@ -96,7 +93,6 @@ tasks:
     cmds:
       - cp {{._T}} {{._F}}
       - code {{._F}}
-      - cat {{._A}}
 
   terraform:git:
     desc: auto git, use -- COMMIT TITLE
