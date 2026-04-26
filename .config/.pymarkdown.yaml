@@ -23,6 +23,8 @@ plugins:
   no-bare-urls:
     enabled: false
     # zenn で GitHub の特定行へのリンクはベアだけなので仕方なく
+  no-duplicate-header:
+    enabled: false
 extensions:
   front-matter:
     enabled: true
