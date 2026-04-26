@@ -110,6 +110,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-04-26 [ [:memo:](articles/2026-04-26_terraform_tfenv_v3.2.0.md) ] [tfenv が数年ぶりにアップデート](https://zenn.dev/terraform_jp/articles/2026-04-26_terraform_tfenv_v3.2.0)
 - 2026-04-16 [ [:memo:](articles/2026-04-16_terraform_v1_15_0_rc2_deprecated_attr.md) ] [Variable and Output Deprecation を試してみる](https://zenn.dev/terraform_jp/articles/2026-04-16_terraform_v1_15_0_rc2_deprecated_attr)
 - 2026-04-12 [ [:memo:](articles/2026-04-12_terraform_pre-commit.md) ] [pre-commit と terraform 2026年版](https://zenn.dev/terraform_jp/articles/2026-04-12_terraform_pre-commit)
 - 2026-03-07 [ [:memo:](articles/2026-03-07_terraform_pre-commit.md) ] [HCP Terraform と pre-commit-terraform](https://zenn.dev/terraform_jp/articles/2026-03-07_terraform_pre-commit)
