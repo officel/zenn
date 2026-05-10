@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-05-10 [ [:memo:](articles/2026-05-10_jules.md) ] [GW の宿題にAI無料枠の範囲でスマホ向けのパズルゲームを作ってもらった話](https://zenn.dev/raki/articles/2026-05-10_jules)
 - 2026-04-12 [ [:memo:](articles/2026-04-12_direnv.md) ] [direnv で gh auth switch したら楽になった話](https://zenn.dev/raki/articles/2026-04-12_direnv)
 - 2026-03-28 [ [:memo:](articles/2026-03-28_pinning.md) ] [pinning のカタカナ表記（駄文）](https://zenn.dev/raki/articles/2026-03-28_pinning)
 - 2026-03-22 [ [:memo:](articles/2026-03-22_repos_cleanup.md) ] [GitHub Actions と pre-commit-config を SHA pinning](https://zenn.dev/raki/articles/2026-03-22_repos_cleanup)
@@ -110,7 +111,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
-- 2026-04-26 [ [:memo:](articles/2026-04-26_terraform_tfenv_v3.2.0.md) ] [tfenv が数年ぶりにアップデート](https://zenn.dev/terraform_jp/articles/2026-04-26_terraform_tfenv_v3.2.0)
+- 2026-04-26 [ [:memo:](articles/2026-04-26_terraform_tfenv_v3_2_0.md) ] [tfenv が数年ぶりにアップデート](https://zenn.dev/terraform_jp/articles/2026-04-26_terraform_tfenv_v3_2_0)
 - 2026-04-16 [ [:memo:](articles/2026-04-16_terraform_v1_15_0_rc2_deprecated_attr.md) ] [Variable and Output Deprecation を試してみる](https://zenn.dev/terraform_jp/articles/2026-04-16_terraform_v1_15_0_rc2_deprecated_attr)
 - 2026-04-12 [ [:memo:](articles/2026-04-12_terraform_pre-commit.md) ] [pre-commit と terraform 2026年版](https://zenn.dev/terraform_jp/articles/2026-04-12_terraform_pre-commit)
 - 2026-03-07 [ [:memo:](articles/2026-03-07_terraform_pre-commit.md) ] [HCP Terraform と pre-commit-terraform](https://zenn.dev/terraform_jp/articles/2026-03-07_terraform_pre-commit)
