@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-05-23 [ [:memo:](articles/2026-05-23_repo.md) ] [インフラ寄りリポジトリの環境説明](https://zenn.dev/raki/articles/2026-05-23_repo)
 - 2026-05-10 [ [:memo:](articles/2026-05-10_jules.md) ] [GW の宿題にAI無料枠の範囲でスマホ向けのパズルゲームを作ってもらった話](https://zenn.dev/raki/articles/2026-05-10_jules)
 - 2026-04-12 [ [:memo:](articles/2026-04-12_direnv.md) ] [direnv で gh auth switch したら楽になった話](https://zenn.dev/raki/articles/2026-04-12_direnv)
 - 2026-03-28 [ [:memo:](articles/2026-03-28_pinning.md) ] [pinning のカタカナ表記（駄文）](https://zenn.dev/raki/articles/2026-03-28_pinning)
