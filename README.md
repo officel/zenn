@@ -13,13 +13,14 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-06-07 [ [:memo:](articles/2026-06-07_alias.md) ] [コマンドalias設定、その規律と活用術](https://zenn.dev/raki/articles/2026-06-07_alias)
 - 2026-05-23 [ [:memo:](articles/2026-05-23_repo.md) ] [インフラ寄りリポジトリの環境説明](https://zenn.dev/raki/articles/2026-05-23_repo)
 - 2026-05-10 [ [:memo:](articles/2026-05-10_jules.md) ] [GW の宿題にAI無料枠の範囲でスマホ向けのパズルゲームを作ってもらった話](https://zenn.dev/raki/articles/2026-05-10_jules)
 - 2026-04-12 [ [:memo:](articles/2026-04-12_direnv.md) ] [direnv で gh auth switch したら楽になった話](https://zenn.dev/raki/articles/2026-04-12_direnv)
 - 2026-03-28 [ [:memo:](articles/2026-03-28_pinning.md) ] [pinning のカタカナ表記（駄文）](https://zenn.dev/raki/articles/2026-03-28_pinning)
 - 2026-03-22 [ [:memo:](articles/2026-03-22_repos_cleanup.md) ] [GitHub Actions と pre-commit-config を SHA pinning](https://zenn.dev/raki/articles/2026-03-22_repos_cleanup)
-- 2026-03-20 [ [:memo:](articles/2026-03-20_how_about_using_github.md) ] [旅行の計画を GitHub で](https://zenn.dev/raki/articles/2026-03-20_how_about_using_github)
 - 2026-03-20 [ [:memo:](articles/2026-03-20_github_actions_cron_tz.md) ] [GitHub Actions の cron にタイムゾーンが指定できるようになった、が。。。](https://zenn.dev/raki/articles/2026-03-20_github_actions_cron_tz)
+- 2026-03-20 [ [:memo:](articles/2026-03-20_how_about_using_github.md) ] [旅行の計画を GitHub で](https://zenn.dev/raki/articles/2026-03-20_how_about_using_github)
 - 2026-03-19 [ [:memo:](articles/2026-03-19_network_incident.md) ] [回線障害で困ったので個人的なポストモーテム](https://zenn.dev/raki/articles/2026-03-19_network_incident)
 - 2026-03-09 [ [:memo:](articles/2026-03-09_crlf.md) ] [リポジトリに crlf のファイル](https://zenn.dev/raki/articles/2026-03-09_crlf)
 - 2026-03-08 [ [:memo:](articles/2026-03-08_vscode_keybindings.md) ] [VS Code の特選キーボードショートカットその２](https://zenn.dev/raki/articles/2026-03-08_vscode_keybindings)
