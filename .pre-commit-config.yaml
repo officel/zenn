@@ -27,6 +27,11 @@ repos:
       - id: trailing-whitespace
       - id: check-merge-conflict
 
+  - repo: https://github.com/betterleaks/betterleaks
+    rev: 40d5cafea2045d16a217c1b70a69d6bba6b892ec  # frozen: v1.4.1
+    hooks:
+      - id: betterleaks
+
   - repo: https://github.com/gitleaks/gitleaks
     rev: 83d9cd684c87d95d656c1458ef04895a7f1cbd8e  # frozen: v8.30.1
     hooks:
