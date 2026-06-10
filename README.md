@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-06-10 [ [:memo:](articles/2026-06-10_betterleaks.md) ] [BetterLeaks を pre-commit で使う時の工夫](https://zenn.dev/raki/articles/2026-06-10_betterleaks)
 - 2026-06-07 [ [:memo:](articles/2026-06-07_alias.md) ] [alias 設定の自分用プラクティス](https://zenn.dev/raki/articles/2026-06-07_alias)
 - 2026-05-23 [ [:memo:](articles/2026-05-23_repo.md) ] [インフラ寄りリポジトリの環境説明](https://zenn.dev/raki/articles/2026-05-23_repo)
 - 2026-05-10 [ [:memo:](articles/2026-05-10_jules.md) ] [GW の宿題にAI無料枠の範囲でスマホ向けのパズルゲームを作ってもらった話](https://zenn.dev/raki/articles/2026-05-10_jules)
