@@ -67,6 +67,14 @@ repos:
         args:
           - -c=.config/.yamllint
 
+  - repo: https://github.com/owenlamont/ryl-pre-commit
+    rev: 75e565ff428fb9bad213c3c76d1bde37ffeb8fcf  # frozen: v0.15.0
+    hooks:
+      - id: ryl
+        types_or: [yaml, markdown]
+        args:
+          - -c=.config/.ryl.toml
+
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: 91ab4bf57e58b32adf1a122681f6ebe164d081c8  # frozen: v4.4.0
     hooks:
