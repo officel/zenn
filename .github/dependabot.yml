@@ -15,6 +15,8 @@ updates:
           - "*"
     cooldown:
       default-days: 7
+    commit-message:
+      prefix: "chore(ga):"
 
   - package-ecosystem: "pre-commit"
     directory: "/"
@@ -26,3 +28,5 @@ updates:
           - "*"
     cooldown:
       default-days: 7
+    commit-message:
+      prefix: "chore(pre-commit):"
