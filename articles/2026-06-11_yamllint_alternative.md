@@ -3,7 +3,7 @@ title: "ryl -- yamllint の代替ツールを探して"
 emoji: "🔎"
 type: "tech" # tech or idea
 topics: ["git", "pre-commit", "prek", "yamllint", "ryl"]
-published: false # 公開前に true に直す
+published: true # 公開前に true に直す
 ---
 
 # tl;dr
