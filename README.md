@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-06-13 [ [:memo:](articles/2026-06-13_rumdl.md) ] [rumdl -- markdownlint の代替を探して](https://zenn.dev/raki/articles/2026-06-13_rumdl)
 - 2026-06-11 [ [:memo:](articles/2026-06-11_yamllint_alternative.md) ] [ryl -- yamllint の代替ツールを探して](https://zenn.dev/raki/articles/2026-06-11_yamllint_alternative)
 - 2026-06-10 [ [:memo:](articles/2026-06-10_betterleaks.md) ] [BetterLeaks を pre-commit で使う時の工夫](https://zenn.dev/raki/articles/2026-06-10_betterleaks)
 - 2026-06-07 [ [:memo:](articles/2026-06-07_alias.md) ] [alias 設定の自分用プラクティス](https://zenn.dev/raki/articles/2026-06-07_alias)

@@ -1,0 +1,96 @@
+# rumdl configuration generated from pymarkdownlint settings
+
+[global]
+# see: https://github.com/rvben/rumdl/blob/main/docs/global-settings.md
+
+disable = [
+  # 無効化をリストするよりも、各ルールごとにコメントを残したほうが変更しやすく
+  # ルールの意図もわかりやすくなるのではないかと思い、試験中
+]
+
+extend-enable = [
+  # 追加で有効にするルールを指定する
+
+  # "MD060",	# table-format
+  # テーブルの整形はツールに依存するので有効化しない
+
+  # "MD063",	# heading-capitalization
+  # ヘッダーのキャピタライズは好みが分かれるため有効化しない
+
+  "MD070",	# nested-code-fence
+  # コードブロックの中にコードブロックを入れることを禁止するルール（有効）
+
+  # "MD072",	# front-matter-key-sorting
+  # フロントマターのキーの順序は見やすさを優先したいので有効化しない
+
+  "MD073",	# toc-validation
+  "MD074",	# mkdocs-navigation-validation
+]
+
+exclude = [
+  # 対象外にするディレクトリやファイルを指定する
+  "backup",
+]
+
+include = [
+  # 対象にするディレクトリやファイルを指定する
+]
+
+respect-gitignore = true
+
+flavor = "standard"
+
+[per-file-flavor]
+
+[per-file-ignores]
+
+
+# Rule-specific settings
+# see: https://github.com/rvben/rumdl/blob/main/docs/rules.md
+# 設定変更したいものだけを記載するといいはず
+# 番号順にソートしておくと、ルールの追加や削除がしやすい
+
+[MD004]
+# Unordered list style should be consistent
+# リストのスタイルを統一することを要求するルール
+# 用途別にリストスタイルを使い分けることが多いため、個人的に無効化
+enabled = false
+
+[MD010]
+code-blocks = false
+
+[MD013]
+line-length = 400
+code-blocks = false
+
+[MD014]
+# Aliases: commands-show-output
+# コードブロック中でプロンプトをつけてあったらアウトプットが必要ってルール
+# アウトプットのないコマンドとか、それらをまとめて見やすくした部分などもエラーになってしまうので、個人的に無効化
+enabled = false
+
+[MD025]
+# Aliases: single-title, single-h1
+# 同じ見出しを複数使用しないことを要求するルール
+# 個人的に無効化
+enabled = false
+
+[MD033]
+# Aliases: no-inline-html
+# HTMLタグの使用を制限するルール
+allowed-elements = [
+  "br",
+  "hr",
+  "details",
+  "summary"
+]
+disallowed-elements = [
+  "gfm",
+]
+
+[MD076]
+# List item spacing should be consistent
+# リストアイテムの間に空行を入れないことを要求するルール
+# 調整してみたんだけど、リストの入れ子の前後に空白行は見やすいと思うんだけどエラーにしてしまうので、個人的に無効化
+enabled = false
+allow-loose-continuation = true

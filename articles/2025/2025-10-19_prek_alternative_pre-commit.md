@@ -176,7 +176,7 @@ Python, Node.js, Go, Rust, Ruby などの言語ツールチェーン管理を改
 - 個人的には autoupdate も Actions でやってるからもう少しいるけど
 - ローカルでは direnv で function かいて pre-commit を prek に置換すればついうっかり pre-commit しても大丈夫（そもそもどっちも使えるように選んだんだから別にどっちが動いても構わないけど）
 
-```.envrc
+```text:.envrc
 # .envrc
 pre-commit (){
   prek "$@"
