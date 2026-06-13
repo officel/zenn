@@ -11,15 +11,7 @@ repos:
     rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
     hooks:
       - id: check-json
-        exclude: |
-          (?x)^(
-            backup/[\d|\w|_]+\/(.*?)|
-            docs/nodejs/ts_tutorial/tsconfig.json|
-            path/to/file3.json
-          )$
       - id: check-yaml
-        args:
-          - --allow-multiple-documents
       - id: check-toml
       - id: check-xml
       - id: detect-private-key
@@ -32,11 +24,6 @@ repos:
     hooks:
       - id: betterleaks
 
-  - repo: https://github.com/gitleaks/gitleaks
-    rev: 83d9cd684c87d95d656c1458ef04895a7f1cbd8e  # frozen: v8.30.1
-    hooks:
-      - id: gitleaks
-
   - repo: https://github.com/rhysd/actionlint
     rev: 914e7df21a07ef503a81201c76d2b11c789d3fca  # frozen: v1.7.12
     hooks:
@@ -47,32 +34,12 @@ repos:
     hooks:
       - id: zizmor
 
-  - repo: https://github.com/jackdewinter/pymarkdown
-    rev: 491b8945442244c6b03028a96e9a8bde9ad63400  # frozen: v0.9.37
-    hooks:
-      - id: pymarkdown
-        args:
-          - --config=.config/.pymarkdown.yaml
-          - scan
-        exclude: |
-          (?x)^(
-            backup/[\d|\w|_]+\/(.*?)|
-            path/to/file3.py
-          )$
-
   - repo: https://github.com/rvben/rumdl-pre-commit
     rev: 65796824868c4b3bea1743498325a5b87350c2e8  # frozen: v0.2.15
     hooks:
       - id: rumdl
         args: ["--fix"]
       - id: rumdl-fmt
-
-  - repo: https://github.com/adrienverge/yamllint.git
-    rev: cba56bcde1fdd01c1deb3f945e69764c291a6530  # frozen: v1.38.0
-    hooks:
-      - id: yamllint
-        args:
-          - -c=.config/.yamllint
 
   - repo: https://github.com/owenlamont/ryl-pre-commit
     rev: 75e565ff428fb9bad213c3c76d1bde37ffeb8fcf  # frozen: v0.15.0
