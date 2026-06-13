@@ -53,6 +53,7 @@ publication_name: "terraform_jp"
 
 - tag はデフォルトで latest なんだけど、cache を使う時はバージョン指定しないとダメ
 
+<!-- rumdl-disable-next-line MD034 -->
 https://github.com/jaxxstorm/action-install-gh-release/blob/v2.1.0/src/main.ts#L53
 
 # よし

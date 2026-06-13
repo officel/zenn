@@ -38,8 +38,8 @@ published: true
 
 - 必要のない履歴を記録しないようにする
 
-  - `export HISTCONTROL=ignorespace`  先頭が空白のコマンドを履歴に残さない
-  - `export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:`  指定のコマンドを履歴に残さない
+  - `export HISTCONTROL=ignorespace` 先頭が空白のコマンドを履歴に残さない
+  - `export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:` 指定のコマンドを履歴に残さない
 
 - VS Code とのキーボードショートカットのバッティングは設定で避けられる（必須でもないので対応してないけど）
 
