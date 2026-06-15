@@ -71,8 +71,8 @@ tasks:
     cmds:
       - task: _git
         vars:
-          TITLE: "blog(raki): {{.DATE_I}} {{.CLI_ARGS}}"
-          BRANCH: "blog/raki/{{.DATE_I}}"
+          TITLE: "feat(raki): {{.DATE_I}} {{.CLI_ARGS}}"
+          BRANCH: "feat/blog/raki/{{.DATE_I}}"
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_raki
@@ -104,8 +104,8 @@ tasks:
     cmds:
       - task: _git
         vars:
-          TITLE: "blog(terraform_jp): {{.DATE_I}} {{.CLI_ARGS}}"
-          BRANCH: "blog/terraform_jp/{{.DATE_I}}"
+          TITLE: "feat(terraform_jp): {{.DATE_I}} {{.CLI_ARGS}}"
+          BRANCH: "feat/blog/terraform_jp/{{.DATE_I}}"
           TARGET: "articles/ images/"
           # 一連の処理のエラーを捕捉
           ON_ERROR: /tmp/on_error_terraform_jp
