@@ -53,6 +53,3 @@ repos:
     rev: 91ab4bf57e58b32adf1a122681f6ebe164d081c8  # frozen: v4.4.0
     hooks:
       - id: conventional-pre-commit
-        stages: [commit-msg]
-        args:
-          [feat, fix, build, chore, ci, docs, perf, refactor, revert, style, test, blog]
