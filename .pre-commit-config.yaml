@@ -42,7 +42,7 @@ repos:
       - id: rumdl-fmt
 
   - repo: https://github.com/owenlamont/ryl-pre-commit
-    rev: c4ad375161f4ab823bd05cea6401a30b5e551585  # frozen: v0.17.0
+    rev: cd8c63f0a3ce8d0c101f388107806cff2be9b6be  # frozen: v0.18.0
     hooks:
       - id: ryl
         types_or: [yaml, markdown]
