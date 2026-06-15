@@ -47,7 +47,7 @@ repos:
       - id: ryl
         types_or: [yaml, markdown]
         args:
-          - -c=.config/.ryl.toml
+          - -c=.config/ryl.toml
 
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: 91ab4bf57e58b32adf1a122681f6ebe164d081c8  # frozen: v4.4.0
