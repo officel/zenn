@@ -116,6 +116,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-06-22 [ [:memo:](articles/2026-06-22_terraform_miniblue.md) ] [Azure のローカル開発に miniblue を使ってみた。が](https://zenn.dev/terraform_jp/articles/2026-06-22_terraform_miniblue)
 - 2026-06-10 [ [:memo:](articles/2026-06-10_terraform_required_version.md) ] [terraform の細かすぎて伝わらない小ネタ required_version](https://zenn.dev/terraform_jp/articles/2026-06-10_terraform_required_version)
 - 2026-05-11 [ [:memo:](articles/2026-05-11_01_terraform_ai.md) ] [Deep Research で terraform_jp の記事を分析してみた](https://zenn.dev/terraform_jp/articles/2026-05-11_01_terraform_ai)
 - 2026-04-26 [ [:memo:](articles/2026-04-26_terraform_tfenv_v3_2_0.md) ] [tfenv が数年ぶりにアップデート](https://zenn.dev/terraform_jp/articles/2026-04-26_terraform_tfenv_v3_2_0)
