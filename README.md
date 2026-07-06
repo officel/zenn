@@ -116,6 +116,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-07-07 [ [:memo:](articles/2026-07-07_terraform_graph_format_mermaid.md) ] [terraform graph -format mermaid が来るっぽいので試してみた](https://zenn.dev/terraform_jp/articles/2026-07-07_terraform_graph_format_mermaid)
 - 2026-06-26 [ [:memo:](articles/2026-06-26_terraform.md) ] [tflint と terraform-docs のバッティングを回避](https://zenn.dev/terraform_jp/articles/2026-06-26_terraform)
 - 2026-06-23 [ [:memo:](articles/2026-06-23_terraform_floci.md) ] [Azure のローカル開発に floci を使ってみた。が](https://zenn.dev/terraform_jp/articles/2026-06-23_terraform_floci)
 - 2026-06-22 [ [:memo:](articles/2026-06-22_terraform_miniblue.md) ] [Azure のローカル開発に miniblue を使ってみた。が](https://zenn.dev/terraform_jp/articles/2026-06-22_terraform_miniblue)
