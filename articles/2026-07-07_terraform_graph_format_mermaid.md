@@ -1,6 +1,6 @@
 ---
 title: "terraform graph -format mermaid が来るっぽいので試してみた"
-emoji: "💹"
+emoji: "🧜‍♀️"
 type: "tech"
 topics: ["terraform", "mermaid", "graph"]
 published: true
