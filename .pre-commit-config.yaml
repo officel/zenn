@@ -20,7 +20,7 @@ repos:
       - id: check-merge-conflict
 
   - repo: https://github.com/betterleaks/betterleaks
-    rev: ac65f4739c352ab23dc2650a65be261016543599  # frozen: v1.5.0
+    rev: 28f08b4c8c4420a601f67ee9887c201697ff4568  # frozen: v1.6.1
     hooks:
       - id: betterleaks
 
@@ -35,7 +35,7 @@ repos:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: 479ff1e4e2ea17d1bf8ffef84e59a1a6942b55fc  # frozen: v0.2.20
+    rev: 77cb2353b60aecd74aa56db968b49ae0ff25144e  # frozen: v0.2.28
     hooks:
       - id: rumdl
         args: ["--fix"]
