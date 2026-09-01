@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-09-02 [ [:memo:](articles/2026-09-02_git_with_detached.md) ] [ローカルブランチレス運用 2026](https://zenn.dev/raki/articles/2026-09-02_git_with_detached)
 - 2026-08-14 [ [:memo:](articles/2026-08-14_alias_task_fzf.md) ] [task を fzf で選択して実行する alias の成長過程](https://zenn.dev/raki/articles/2026-08-14_alias_task_fzf)
 - 2026-08-13 [ [:memo:](articles/2026-08-13_brew.md) ] [brew をメンテする task](https://zenn.dev/raki/articles/2026-08-13_brew)
 - 2026-06-13 [ [:memo:](articles/2026-06-13_rumdl.md) ] [rumdl -- markdownlint の代替を探して](https://zenn.dev/raki/articles/2026-06-13_rumdl)
