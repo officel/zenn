@@ -7,8 +7,7 @@ default_install_hook_types:
   - commit-msg
 
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks.git
-    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
+  - repo: builtin
     hooks:
       - id: check-json
       - id: check-yaml
@@ -30,12 +29,12 @@ repos:
       - id: actionlint
 
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: 451b56af716f9f0d0c2b816503a3fd0cf8b036fa  # frozen: v1.29.0
+    rev: cef8b8350da46d8114c7e6b7272aebdccdf193ce  # frozen: v1.30.0
     hooks:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: 00c9d9edd7a5d4cb8241c158888c015d71873889  # frozen: v0.2.60
+    rev: 96758e4f8d7dddc784472e7768d6ca04bb7c3dec  # frozen: v0.2.63
     hooks:
       - id: rumdl
         args: ["--fix"]
