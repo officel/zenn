@@ -149,6 +149,7 @@ gr
 
 # なんらかの作業
 echo "Implementing feature..." >> README.md
+gau
 gcv -m "feat: implement cool feature"
 
 # ブランチを push（ローカルにブランチは作成されないが、リモートにはこの名前でブランチができる）
