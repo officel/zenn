@@ -7,7 +7,8 @@ default_install_hook_types:
   - commit-msg
 
 repos:
-  - repo: builtin
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
     hooks:
       - id: check-json
       - id: check-yaml
@@ -23,8 +24,8 @@ repos:
     hooks:
       - id: betterleaks
 
-  - repo: https://github.com/rhysd/actionlint
-    rev: 914e7df21a07ef503a81201c76d2b11c789d3fca  # frozen: v1.7.12
+  - repo: https://github.com/kjanat/actionlint
+    rev: 1ab487e641ac26ed42a8a753158033d55eaae2e4  # frozen: v1.14.0
     hooks:
       - id: actionlint
 
@@ -34,7 +35,7 @@ repos:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: 96758e4f8d7dddc784472e7768d6ca04bb7c3dec  # frozen: v0.2.63
+    rev: 0041e471e7f0935246bab97f58d3205d9049f925  # frozen: v0.2.64
     hooks:
       - id: rumdl
         args: ["--fix"]
