@@ -35,7 +35,7 @@ repos:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: 2e9b57dbffd7869f0ee8bcdb1978cb1c477cb042  # frozen: v0.2.73
+    rev: cbd02203fbbb2839cd7e25e3062628ba4af18991  # frozen: v0.2.77
     hooks:
       - id: rumdl
         args: ["--fix"]
