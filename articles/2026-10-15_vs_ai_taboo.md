@@ -3,7 +3,7 @@ title: "禁忌についてAIと壁打ちしたら面白かった話"
 emoji: "🚫"
 type: "idea" # tech or idea
 topics: ["ai", "gemini", "x"]
-published: false # 公開前に true に直す
+published: true # 公開前に true に直す
 ---
 
 # tl;dr
