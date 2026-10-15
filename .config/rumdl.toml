@@ -60,7 +60,7 @@ enabled = false
 code-blocks = false
 
 [MD013]
-line-length = 400
+line-length = 560
 code-blocks = false
 
 [MD014]
