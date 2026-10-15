@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-10-15 [ [:memo:](articles/2026-10-15_vs_ai_taboo.md) ] [禁忌についてAIと壁打ちしたら面白かった話](https://zenn.dev/raki/articles/2026-10-15_vs_ai_taboo)
 - 2026-09-13 [ [:memo:](articles/2026-09-13_raki.md) ] [最近の失敗とリカバリー](https://zenn.dev/raki/articles/2026-09-13_raki)
 - 2026-09-06 [ [:memo:](articles/2026-09-06_uchi.md) ] [dotfiles の管理に uchi を作り始めた話](https://zenn.dev/raki/articles/2026-09-06_uchi)
 - 2026-09-02 [ [:memo:](articles/2026-09-02_git_with_detached.md) ] [ローカルブランチレス運用 2026](https://zenn.dev/raki/articles/2026-09-02_git_with_detached)
