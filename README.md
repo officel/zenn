@@ -123,6 +123,7 @@
 <summary>2026 年の記事</summary>
 
 - 2026-10-27 [ [:memo:](articles/2026-10-27_tfstylus_01.md) ] [その１　なぜ tfstylus を作ったのか](https://zenn.dev/terraform_jp/articles/2026-10-27_tfstylus_01)
+- 2026-10-27 [ [:memo:](articles/2026-10-27_tfstylus_02.md) ] [その２　tfstylus を作り始めた時にわかっていなかったこと](https://zenn.dev/terraform_jp/articles/2026-10-27_tfstylus_02)
 - 2026-10-26 [ [:memo:](articles/2026-10-26_tfstylus.md) ] [terraform のコードを少し整える tfstylus を作ってみた](https://zenn.dev/terraform_jp/articles/2026-10-26_tfstylus)
 - 2026-07-07 [ [:memo:](articles/2026-07-07_terraform_graph_format_mermaid.md) ] [terraform graph -format mermaid が来るっぽいので試してみた](https://zenn.dev/terraform_jp/articles/2026-07-07_terraform_graph_format_mermaid)
 - 2026-06-26 [ [:memo:](articles/2026-06-26_terraform.md) ] [tflint と terraform-docs のバッティングを回避](https://zenn.dev/terraform_jp/articles/2026-06-26_terraform)
