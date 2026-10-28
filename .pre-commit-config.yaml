@@ -29,6 +29,11 @@ repos:
     hooks:
       - id: actionlint
 
+  - repo: https://github.com/jdx/jactionlint
+    rev: a65ab044e916760429068fe5794b8306abdfcbb9  # frozen: v2.3.0
+    hooks:
+      - id: jactionlint
+
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
     rev: c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f  # frozen: v1.31.1
     hooks:
