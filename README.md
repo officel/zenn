@@ -122,6 +122,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-10-30 [ [:memo:](articles/2026-10-30_tfstylus_04.md) ] [その４　tfstylus をAIで開発しての気づき](https://zenn.dev/terraform_jp/articles/2026-10-30_tfstylus_04)
 - 2026-10-28 [ [:memo:](articles/2026-10-28_tfstylus_03.md) ] [その３　AIと併走しながら tfstylus を開発して苦労したこと](https://zenn.dev/terraform_jp/articles/2026-10-28_tfstylus_03)
 - 2026-10-27 [ [:memo:](articles/2026-10-27_tfstylus_01.md) ] [その１　なぜ tfstylus を作ったのか](https://zenn.dev/terraform_jp/articles/2026-10-27_tfstylus_01)
 - 2026-10-27 [ [:memo:](articles/2026-10-27_tfstylus_02.md) ] [その２　tfstylus を作り始めた時にわかっていなかったこと](https://zenn.dev/terraform_jp/articles/2026-10-27_tfstylus_02)
