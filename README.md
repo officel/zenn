@@ -13,6 +13,7 @@
 <details open>
 <summary>2026 年の記事</summary>
 
+- 2026-11-06 [ [:memo:](articles/2026-11-06_gh-secure.md) ] [GitHub のパブリックリポジトリをセキュアにする機能拡張](https://zenn.dev/raki/articles/2026-11-06_gh-secure)
 - 2026-10-31 [ [:memo:](articles/2026-10-31_mermaid_venn.md) ] [AIに mermaid でベン図を書かせてみせて](https://zenn.dev/raki/articles/2026-10-31_mermaid_venn)
 - 2026-10-15 [ [:memo:](articles/2026-10-15_vs_ai_taboo.md) ] [禁忌についてAIと壁打ちしたら面白かった話](https://zenn.dev/raki/articles/2026-10-15_vs_ai_taboo)
 - 2026-09-13 [ [:memo:](articles/2026-09-13_raki.md) ] [最近の失敗とリカバリー](https://zenn.dev/raki/articles/2026-09-13_raki)
