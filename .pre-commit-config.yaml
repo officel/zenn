@@ -30,7 +30,7 @@ repos:
       - id: actionlint
 
   - repo: https://github.com/jdx/jactionlint
-    rev: a65ab044e916760429068fe5794b8306abdfcbb9  # frozen: v2.3.0
+    rev: baa8d685e2b27ff5821558c9eeabb2051c1da61b  # frozen: v2.4.0
     hooks:
       - id: jactionlint
 
@@ -40,20 +40,20 @@ repos:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: eaeb8abc646954face3eb41726f085385410f761  # frozen: v0.3.1
+    rev: b0cff962ee693b9e612c097d22e71e0cba127447  # frozen: v0.3.2
     hooks:
       - id: rumdl
         args: ["--fix"]
       - id: rumdl-fmt
 
   - repo: https://github.com/owenlamont/ryl-pre-commit
-    rev: ebab13c478952f480f31b75f3fd7649993a4ce5e  # frozen: v0.26.1
+    rev: ba2d2344c24a99c2e87325bb4f9b966692ff3c53  # frozen: v0.28.0
     hooks:
       - id: ryl-check
         args: ["--fix"]
         types_or: [yaml, markdown]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: 91ab4bf57e58b32adf1a122681f6ebe164d081c8  # frozen: v4.4.0
+    rev: 33b50eb042bee26eac0ee96ad84aa9c1b4dccdd8  # frozen: v4.5.0
     hooks:
       - id: conventional-pre-commit
