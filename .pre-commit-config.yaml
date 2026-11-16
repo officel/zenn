@@ -20,40 +20,40 @@ repos:
       - id: check-merge-conflict
 
   - repo: https://github.com/betterleaks/betterleaks
-    rev: 81aff7a638638aae3a659845d089043e1d8fe9ac  # frozen: v1.9.0
+    rev: 39d5bdcf34db54e944facac5cf6e8b03db5e2b99  # frozen: v1.10.1
     hooks:
       - id: betterleaks
 
   - repo: https://github.com/kjanat/actionlint
-    rev: 08bb2c4f0d039744455b87aef1c647fb8b66d37b  # frozen: v1.17.0
+    rev: 220b76cfa568e00ed8b3c476898f849a722b88e2  # frozen: v1.17.1
     hooks:
       - id: actionlint
 
   - repo: https://github.com/jdx/jactionlint
-    rev: a65ab044e916760429068fe5794b8306abdfcbb9  # frozen: v2.3.0
+    rev: 72c00452809bcca05b8bc12acdcf15dd7a9c1c5e  # frozen: v2.6.0
     hooks:
       - id: jactionlint
 
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f  # frozen: v1.31.1
+    rev: 06a39750ec31860bb44f2acf67182c40016cd1e7  # frozen: v1.32.0
     hooks:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: eaeb8abc646954face3eb41726f085385410f761  # frozen: v0.3.1
+    rev: df5a947a3af0dba56640e644c6b9316184749168  # frozen: v0.3.4
     hooks:
       - id: rumdl
         args: ["--fix"]
       - id: rumdl-fmt
 
   - repo: https://github.com/owenlamont/ryl-pre-commit
-    rev: ebab13c478952f480f31b75f3fd7649993a4ce5e  # frozen: v0.26.1
+    rev: 28e47001bb1d516a8197b1f60ef6c526029ed9d5  # frozen: v0.29.0
     hooks:
       - id: ryl-check
         args: ["--fix"]
         types_or: [yaml, markdown]
 
   - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: 91ab4bf57e58b32adf1a122681f6ebe164d081c8  # frozen: v4.4.0
+    rev: 33b50eb042bee26eac0ee96ad84aa9c1b4dccdd8  # frozen: v4.5.0
     hooks:
       - id: conventional-pre-commit
